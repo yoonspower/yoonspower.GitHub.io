@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yoonspower — iOS apps</title>
+    <style>
+        :root {
+            --ink: #1a1612;
+            --bg: #f5efe3;
+            --muted: rgba(26, 22, 18, 0.54);
+            --accent: rgba(26, 22, 18, 0.12);
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.55;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 32px;
+        }
+        main {
+            max-width: 560px;
+            width: 100%;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+        .tag {
+            font-size: 14px;
+            color: var(--muted);
+            margin-bottom: 40px;
+        }
+        .apps {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .app {
+            display: block;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid var(--accent);
+            transition: transform 0.15s;
+        }
+        .app:hover { transform: translateY(-2px); }
+        .app-name { font-size: 18px; font-weight: 600; margin-bottom: 4px; }
+        .app-desc { font-size: 14px; color: var(--muted); }
+        footer {
+            margin-top: 48px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>yoonspower</h1>
+        <p class="tag">iOS apps · 1인 개발</p>
+
+        <div class="apps">
+            <a class="app" href="https://apps.apple.com/app/id6772886375">
+                <div class="app-name">차자리</div>
+                <div class="app-desc">오늘도 차찾기 시작 — 주차 위치 사진+메모 앱</div>
+            </a>
+        </div>
+
+        <footer>
+            문의 · 개인정보 처리방침은 각 앱의 App Store 페이지를 참고해주세요.
+        </footer>
+    </main>
+</body>
+</html>
