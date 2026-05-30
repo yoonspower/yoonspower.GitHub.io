@@ -91,6 +91,35 @@ footer a { color:var(--dim); margin:0 8px; }
   <p>저장된 Mac 호스트, 사전 공유 키 (PSK), TLS 인증서 지문이 모두 삭제됩니다. 다음 연결 시 페어링을 처음부터 다시 진행해야 합니다.</p>
 </details>
 
+<h2>집 밖에서 원격 접속하기</h2>
+
+<p>MacBeam 은 기본적으로 <strong>iPhone 과 Mac 이 같은 Wi-Fi</strong> 에 있을 때 자동으로 연결됩니다. 외출 중에도 집 Mac 에 접속하려면, 두 기기를 같은 가상 네트워크로 묶어주면 됩니다. 가장 쉬운 방법은 무료 앱 <strong>Tailscale</strong> 입니다.</p>
+
+<div class="card">
+  <h3>Tailscale 로 어디서나 접속 (초보자 추천 · 무료)</h3>
+  <p style="color:var(--fg); font-size:14px;">
+    1. <strong>Mac</strong> 에 Tailscale 설치: <a href="https://tailscale.com/download" target="_blank" rel="noopener">tailscale.com/download</a> → 실행 후 Google/Apple/Microsoft 계정으로 로그인.<br>
+    2. <strong>iPhone</strong> 에 App Store 에서 <strong>Tailscale</strong> 설치 → <em>같은 계정</em> 으로 로그인하고 VPN 을 켭니다.<br>
+    3. 두 기기 모두 Tailscale 이 켜진 상태가 되면, Tailscale 앱에서 <strong>Mac 의 IP (보통 100.x.x.x)</strong> 를 확인하세요.<br>
+    4. 처음 한 번은 <strong>같은 Wi-Fi 에서 페어링</strong> 을 끝내 두는 것을 권장합니다 (PIN 페어링으로 인증키 저장).<br>
+    5. 이후 외부에서는 MacBeam 앱 → <strong>설정 → "호스트 IP"</strong> 에 위 <strong>100.x.x.x</strong> 주소, <strong>포트 5901</strong> 을 입력하면 바로 연결됩니다.
+  </p>
+</div>
+
+<p style="color:var(--dim); font-size:14px;">Tailscale 무료 플랜으로 개인 기기 다수를 연결할 수 있고, 카페·LTE·다른 집 어디서든 (통신사 CGNAT 환경 포함) 동작합니다. MacBeam 은 중계 서버를 두지 않는 순수 P2P 방식이라, 이렇게 두 기기를 같은 네트워크로 묶어 주는 단계가 필요합니다.</p>
+
+<details>
+  <summary>고급: VPN 없이 포트 포워딩으로 접속하기</summary>
+  <p>
+    네트워크에 익숙한 사용자라면 공유기 설정으로도 가능합니다 (공인 IP 가 있는 경우).<br><br>
+    1. 같은 Wi-Fi 에서 먼저 1회 페어링.<br>
+    2. 공유기 관리자 → <strong>포트 포워딩</strong>: 외부 포트(예: 5901) → Mac 내부 IP 의 <code>5901/TCP</code>.<br>
+    3. 집 IP 가 바뀌므로 공유기 <strong>DDNS</strong> 를 켜서 고정 주소를 만듭니다.<br>
+    4. MacBeam 앱 → 설정 → 호스트 IP 에 공인 IP 또는 DDNS 주소, 포트에 외부 포트를 입력.<br><br>
+    ⚠️ 화면 제어 포트를 인터넷에 여는 것이므로, 비표준 포트 사용을 권장합니다. 연결은 TLS + 사전 공유 키(PSK) + 인증서 핀고정으로 보호됩니다. 통신사가 CGNAT 를 쓰는 경우 이 방법은 동작하지 않으니 Tailscale 을 사용하세요.
+  </p>
+</details>
+
 <h2>문의</h2>
 
 <div class="contact">
