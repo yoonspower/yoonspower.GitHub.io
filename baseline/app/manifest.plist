@@ -15,7 +15,7 @@
       <key>metadata</key>
       <dict>
         <key>bundle-identifier</key><string>com.yoonspower.wellnessapp</string>
-        <key>bundle-version</key><string>0.2.1</string>
+        <key>bundle-version</key><string>0.3</string>
         <key>kind</key><string>software</string>
         <key>title</key><string>베이스라인 웰니스</string>
       </dict>
