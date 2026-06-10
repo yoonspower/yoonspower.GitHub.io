@@ -1,0 +1,5 @@
+{"ts":"2026-06-04T07:10:53.881Z","cmd":"goto","args":"https://yoonspower.github.io/recall/","origin":"https://yoonspower.github.io/recall/","durationMs":346,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-04T07:10:53.967Z","cmd":"js","args":"document.body.innerText.match(/₩[0-9,]+/g)","origin":"https://yoonspower.github.io/recall/","durationMs":8,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-04T07:12:29.539Z","cmd":"goto","args":"https://yoonspower.github.io/recall/?v=1780557149","origin":"https://yoonspower.github.io/recall/?v=1780557149","durationMs":228,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-04T07:12:29.600Z","cmd":"text","args":"","origin":"https://yoonspower.github.io/recall/?v=1780557149","durationMs":1,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-04T07:12:44.621Z","cmd":"screenshot","args":"/tmp/recall_home_new.png","origin":"https://yoonspower.github.io/recall/?v=1780557149","durationMs":113,"status":"ok","hasCookies":false,"mode":"launched"}
