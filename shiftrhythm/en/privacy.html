@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShiftRhythm — Privacy Policy</title>
+<meta name="description" content="ShiftRhythm's privacy policy. No data is collected or transmitted; all computation happens on your device.">
+<meta name="theme-color" content="#15171c">
+<link rel="alternate" hreflang="ko" href="https://yoonspower.github.io/shiftrhythm/privacy.html">
+<link rel="alternate" hreflang="en" href="https://yoonspower.github.io/shiftrhythm/en/privacy.html">
+<style>
+:root { --bg:#15171c; --fg:#f2f4f7; --dim:#a7b0bd; --accent:#5b82ff; --card:#1d2026; --border:#2a2f37; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html, body { background:var(--bg); color:var(--fg); font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; -webkit-font-smoothing:antialiased; line-height:1.65; }
+a { color:var(--accent); text-decoration:none; }
+a:hover { text-decoration:underline; }
+.container { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
+header { padding-bottom:24px; border-bottom:1px solid var(--border); margin-bottom:32px; }
+.crumb { font-size:14px; color:var(--dim); margin-bottom:8px; }
+h1 { font-size:32px; font-weight:700; letter-spacing:-0.5px; margin-bottom:8px; }
+.updated { font-size:14px; color:var(--dim); }
+h2 { font-size:22px; font-weight:700; margin:40px 0 12px; letter-spacing:-0.3px; }
+p { margin-bottom:14px; color:var(--fg); }
+ul, ol { margin:0 0 16px 24px; }
+li { margin-bottom:6px; }
+table { border-collapse:collapse; width:100%; margin:16px 0; font-size:14px; }
+th, td { padding:10px 12px; border:1px solid var(--border); text-align:left; vertical-align:top; }
+th { background:var(--card); font-weight:600; }
+.lang { text-align:right; font-size:13px; margin-bottom:8px; }
+footer { margin-top:64px; padding-top:24px; border-top:1px solid var(--border); font-size:13px; color:var(--dim); text-align:center; }
+footer a { color:var(--dim); margin:0 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<p class="lang"><a href="../privacy.html">한국어</a></p>
+
+<header>
+  <div class="crumb"><a href="/">yoonspower</a> / ShiftRhythm / Privacy Policy</div>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: 2026-06-12</p>
+</header>
+
+<p>ShiftRhythm (the "app") provides body-clock (circadian rhythm) guidance for shift workers. The app <strong>does not collect or transmit any personal information</strong>; all computation happens on your device. This policy explains what that means.</p>
+
+<h2>1. Information we do not collect</h2>
+<ul>
+  <li>Personally identifying information such as name, email, or phone number</li>
+  <li>User accounts (the app has no login or sign-up system)</li>
+  <li>Sensitive permissions such as location, contacts, photos, or microphone</li>
+  <li>Advertising identifiers or tracking data (the app contains no ad or analytics SDKs)</li>
+</ul>
+
+<h2>2. Information processed only on your device</h2>
+<p>The app stores the following only on your device (iOS SwiftData and App Group storage) and never transmits it:</p>
+<ul>
+  <li>Shift patterns, shift start/end times, and per-day corrections you enter</li>
+  <li>Custom patterns you build</li>
+  <li>App settings (such as whether Apple Health integration is on)</li>
+  <li>Body-clock estimate caches (phase computation results)</li>
+</ul>
+
+<h2>3. Apple Health (HealthKit) data</h2>
+<p>If you turn on Apple Health integration, the app uses the following data <strong>read-only</strong> to improve its estimates:</p>
+<table>
+  <thead><tr><th>Data</th><th>Purpose</th></tr></thead>
+  <tbody>
+    <tr><td>Sleep stages</td><td>Sleep score · circadian alignment estimate</td></tr>
+    <tr><td>Step count (activity)</td><td>Light exposure estimate</td></tr>
+    <tr><td>Heart rate variability (HRV)</td><td>Recovery signal estimate</td></tr>
+    <tr><td>Resting heart rate</td><td>Recovery signal estimate</td></tr>
+    <tr><td>Wrist temperature</td><td>Condition reference</td></tr>
+  </tbody>
+</table>
+<ul>
+  <li>This data <strong>never leaves your device.</strong> It is not sent to any server or shared with third parties.</li>
+  <li>The app <strong>does not write</strong> to Apple Health (read-only).</li>
+  <li>Integration is optional; if you decline or turn it off, the app works from your schedule alone.</li>
+  <li>You can change permissions anytime in the iOS <strong>Health app → Data Access &amp; Devices</strong>.</li>
+</ul>
+
+<h2>4. Network use</h2>
+<ul>
+  <li>The app does not communicate with any developer server or external service (no account, no server).</li>
+  <li>Data sync between iPhone and Apple Watch uses Apple's WatchConnectivity, directly between your own two devices, without passing through anything external.</li>
+</ul>
+
+<h2>5. Third-party SDKs and advertising</h2>
+<p>The app contains no advertising, analytics, or tracking SDKs. No data is sent to third parties.</p>
+
+<h2>6. Data retention and deletion</h2>
+<ul>
+  <li>All data is stored only on your device (deleted together when you delete the app).</li>
+  <li>To delete in-app: App → Settings → <strong>"Delete All Data"</strong>.</li>
+  <li>The app keeps no copy of Apple Health data, so turning the integration off stops all reading.</li>
+</ul>
+
+<h2>7. Children</h2>
+<p>The app is rated 4+. We do not knowingly collect information from children under 13.</p>
+
+<h2>8. Medical disclaimer</h2>
+<p>The app provides reference information to help you manage your daily rhythm. It is not a medical device or diagnostic tool, and is not intended to diagnose, treat, or prevent any disease. Consult a professional for health concerns.</p>
+
+<h2>9. Changes</h2>
+<p>If this policy changes, the "Last updated" date on this page will be updated when the app version applying the change is released.</p>
+
+<h2>10. Contact</h2>
+<ul>
+  <li>Email: <a href="mailto:yoonspower@gmail.com">yoonspower@gmail.com</a></li>
+</ul>
+
+<footer>
+  <a href="/">yoonspower</a> · <a href="support.html">Support</a> · <a href="mailto:yoonspower@gmail.com">Contact</a> · <a href="../privacy.html">한국어</a>
+  <p style="margin-top:12px;">© 2026 Jaeyoon Kim · ShiftRhythm</p>
+</footer>
+
+</div>
+</body>
+</html>
