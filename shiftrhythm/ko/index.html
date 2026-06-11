@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ShiftRhythm — Body-Clock Guide for Shift Workers</title>
-<meta name="description" content="Night shifts flipped your sleep? ShiftRhythm estimates your body clock from your roster and Apple Watch, and tells you when to sleep, nap, and seek or avoid light — all on-device.">
+<title>ShiftRhythm — 교대근무자 생체시계 가이드</title>
+<meta name="description" content="야간·교대 근무로 흐트러진 생체시계를 근무표와 Apple Watch로 추정해, 언제 빛을 쬐고 낮잠 자고 회복할지 하루 한 장으로. 모든 계산은 기기 안에서.">
 <meta name="theme-color" content="#15171c">
 <link rel="alternate" hreflang="ko" href="https://yoonspower.github.io/shiftrhythm/ko/">
 <link rel="alternate" hreflang="en" href="https://yoonspower.github.io/shiftrhythm/">
 <style>
 :root { --bg:#15171c; --fg:#f2f4f7; --dim:#a7b0bd; --accent:#5b82ff; --card:#1d2026; --border:#2a2f37; }
 * { box-sizing:border-box; margin:0; padding:0; }
-html, body { background:var(--bg); color:var(--fg); font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; -webkit-font-smoothing:antialiased; line-height:1.65; }
+html, body { background:var(--bg); color:var(--fg); font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Pretendard", "Noto Sans KR", sans-serif; -webkit-font-smoothing:antialiased; line-height:1.65; }
 a { color:var(--accent); text-decoration:none; }
 a:hover { text-decoration:underline; }
 .container { max-width:760px; margin:0 auto; padding:64px 24px 96px; }
@@ -31,7 +31,6 @@ h2 { font-size:22px; font-weight:700; margin:0 0 20px; letter-spacing:-0.3px; }
 .links { text-align:center; margin-top:40px; }
 .links a { display:inline-block; margin:0 12px; font-size:15px; }
 .badge { display:inline-block; margin-top:24px; padding:10px 20px; background:var(--card); border:1px solid var(--border); border-radius:999px; font-size:14px; color:var(--dim); }
-.lang { text-align:right; font-size:13px; margin-bottom:8px; }
 footer { margin-top:64px; padding-top:24px; border-top:1px solid var(--border); font-size:13px; color:var(--dim); text-align:center; }
 footer a { color:var(--dim); margin:0 8px; }
 </style>
@@ -39,53 +38,53 @@ footer a { color:var(--dim); margin:0 8px; }
 <body>
 <div class="container">
 
-<p class="lang"><a href="ko/">한국어</a></p>
+<p style="text-align:right; font-size:13px; margin-bottom:8px;"><a href="../index.html">English</a></p>
 
 <div class="hero">
   <div class="logo">🌗</div>
   <h1>ShiftRhythm</h1>
-  <p class="tagline">Night and rotating shifts scramble your body clock. ShiftRhythm estimates it from your roster and Apple Watch — and gives you one daily card: when to seek or avoid light, when to nap, and how recovered you are.</p>
-  <a class="badge" href="https://apps.apple.com/app/id6776639759">Download on the App Store</a>
+  <p class="tagline">야간·교대 근무로 흐트러진 생체시계를, 근무표와 Apple Watch로 추정해 — 언제 빛을 쬐고, 낮잠 자고, 회복할지 하루 한 장으로.</p>
+  <a class="badge" href="https://apps.apple.com/app/id6776639759">App Store에서 다운로드</a>
 </div>
 
-<h2>What it does</h2>
+<h2>무엇을 해주나요</h2>
 <div class="feature">
   <div class="ico">🕛</div>
-  <div><h3>24-hour body-clock dial</h3><p>See your estimated melatonin onset (DLMO) and biological night (CBTmin) at a glance — with a sleep score.</p></div>
+  <div><h3>24시간 생체시계 다이얼</h3><p>멜라토닌 분비 시작(DLMO)과 몸의 한밤(CBTmin)을 한눈에. 수면 점수도 함께.</p></div>
 </div>
 <div class="feature">
   <div class="ico">☀️</div>
-  <div><h3>Light guide</h3><p>When to seek bright light to advance your clock, and when to stay dim so you don't delay it.</p></div>
+  <div><h3>빛 가이드</h3><p>시계를 앞당기려면 언제 밝은 빛을, 늦추지 않으려면 언제 어둡게.</p></div>
 </div>
 <div class="feature">
   <div class="ico">😴</div>
-  <div><h3>Nap, meals &amp; caffeine timing</h3><p>Timed to your circadian rhythm — including a dose strategy for caffeine.</p></div>
+  <div><h3>낮잠·식사·카페인 타이밍</h3><p>생체리듬에 맞춘 타이밍. 카페인은 용량 전략까지.</p></div>
 </div>
 <div class="feature">
   <div class="ico">💙</div>
-  <div><h3>Today's recovery</h3><p>Last night's sleep plus HRV and resting heart rate — should you push today, or recover?</p></div>
+  <div><h3>오늘의 회복</h3><p>어젯밤 수면에 HRV·안정시심박을 더해, 오늘 무리할지 회복할지.</p></div>
 </div>
 <div class="feature">
   <div class="ico">📅</div>
-  <div><h3>Presets that match real rosters</h3><p>Panama 2-2-3 (day/night), Pitman, DuPont, Fire 48/96, 12-hour rotations — plus Korean and Japanese patterns, or build your own.</p></div>
+  <div><h3>한국 교대 프리셋</h3><p>간호사 3교대, 4조 2/3교대, 격일제, 주야 2교대 — 직접 만들기도 지원.</p></div>
 </div>
 
 <div class="privacy">
-  <h2>Private by design</h2>
-  <p>Everything is computed on your iPhone. Your health data never leaves the device — no servers, no account, no ads. The science behind every estimate is documented inside the app.</p>
+  <h2>프라이버시 우선</h2>
+  <p>모든 계산은 당신의 iPhone 안에서 이뤄집니다. 건강 데이터는 기기를 떠나지 않으며, 서버 전송·계정·광고가 없습니다. 추정의 과학적 근거는 앱 안에서 투명하게 공개합니다.</p>
 </div>
 
 <div class="links">
-  <a href="privacy.html">Privacy Policy</a>
-  <a href="support.html">Support · FAQ</a>
-  <a href="mailto:yoonspower@gmail.com">Contact</a>
+  <a href="privacy.html">개인정보 처리방침</a>
+  <a href="support.html">지원 · FAQ</a>
+  <a href="mailto:yoonspower@gmail.com">문의</a>
 </div>
 
-<p style="text-align:center; font-size:13px; color:var(--dim); margin-top:40px;">※ ShiftRhythm is for general wellness and reference only. It is not a medical device or a diagnostic tool.</p>
+<p style="text-align:center; font-size:13px; color:var(--dim); margin-top:40px;">※ 본 앱은 건강·웰니스 참고용이며 의료기기나 진단 도구가 아닙니다.</p>
 
 <footer>
-  <a href="/">yoonspower</a> · <a href="privacy.html">Privacy</a> · <a href="support.html">Support</a> · <a href="ko/">한국어</a>
-  <p style="margin-top:12px;">© 2026 Jaeyoon Kim · ShiftRhythm</p>
+  <a href="/">yoonspower</a> · <a href="privacy.html">개인정보 처리방침</a> · <a href="support.html">지원</a>
+  <p style="margin-top:12px;">© 2026 김재윤 · ShiftRhythm</p>
 </footer>
 
 </div>
