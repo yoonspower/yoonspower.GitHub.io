@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>동화 PoC 설치</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  body {
+    margin: 0; min-height: 100vh;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 22px; padding: 32px;
+    font-family: -apple-system, "SF Pro Rounded", system-ui, sans-serif;
+    color: #f5f3ff;
+    background: linear-gradient(180deg, #2b294d 0%, #36305e 40%, #161333 100%);
+    text-align: center;
+  }
+  .moon { font-size: 72px; filter: drop-shadow(0 0 16px rgba(255,236,180,.5)); }
+  h1 { font-size: 26px; font-weight: 700; margin: 0; }
+  p { color: #c9c4dd; font-size: 15px; line-height: 1.6; margin: 0; max-width: 320px; }
+  a.btn {
+    display: inline-block; text-decoration: none;
+    background: #fbcfb0; color: #2a2150; font-weight: 700; font-size: 19px;
+    padding: 17px 40px; border-radius: 26px; margin-top: 8px;
+  }
+  a.btn:active { transform: scale(.96); }
+  .note { font-size: 13px; color: #9b95b8; max-width: 320px; line-height: 1.7; }
+</style>
+</head>
+<body>
+  <div class="moon">🌙</div>
+  <h1>Gemma 동화 PoC</h1>
+  <p>아이폰 <b>Safari</b>에서 아래 버튼을 누르면 설치됩니다.<br>온디바이스 한국어 잠자리 동화 생성기.</p>
+  <a class="btn" href="itms-services://?action=download-manifest&url=https://yoonspower.github.io/donghwa/manifest.plist">설치하기</a>
+  <p class="note">
+    설치 후 <b>설정 → 일반 → VPN 및 기기 관리</b>에서 개발자 앱을 한 번 신뢰해 주세요.<br>
+    첫 실행 시 동화 모델(약 2.6GB)을 Wi-Fi로 자동 다운로드합니다.<br>
+    iPhone 16 Plus 전용(등록된 기기).
+  </p>
+</body>
+</html>
