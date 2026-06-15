@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ComfyRemote 설치</title>
+<meta name="theme-color" content="#070910">
+<style>
+:root { --bg:#070910; --fg:#f3f5fa; --dim:#9aa4b5; --card:#12151e; --border:#262b36; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html,body { background:var(--bg); color:var(--fg); font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Pretendard","Noto Sans KR",sans-serif; -webkit-font-smoothing:antialiased; line-height:1.6; }
+.wrap { max-width:480px; margin:0 auto; padding:56px 24px 80px; text-align:center; }
+.logo { width:84px; height:84px; border-radius:20px; background:linear-gradient(135deg,#f472b6,#22d3ee); display:inline-flex; align-items:center; justify-content:center; font-size:42px; margin-bottom:20px; box-shadow:0 12px 40px rgba(244,114,182,.35); }
+h1 { font-size:30px; font-weight:700; letter-spacing:-0.5px; margin-bottom:6px; background:linear-gradient(135deg,#f472b6,#22d3ee); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+.sub { color:var(--dim); font-size:15px; margin-bottom:36px; }
+.btn { display:block; background:linear-gradient(135deg,#f472b6,#22d3ee); color:#fff; font-size:19px; font-weight:700; padding:18px; border-radius:16px; text-decoration:none; margin-bottom:16px; }
+.btn:active { opacity:.85; }
+.note { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:20px; text-align:left; font-size:14px; color:var(--dim); margin-top:28px; }
+.note b { color:var(--fg); }
+.note ol { margin:8px 0 0 18px; } .note li { margin-bottom:6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="logo">🎨</div>
+  <h1>ComfyRemote</h1>
+  <p class="sub">개발 빌드 1.0 · 개인용</p>
+
+  <a class="btn" href="itms-services://?action=download-manifest&url=https://yoonspower.github.io/comfyremote/app/manifest.plist">📲 아이폰에 설치</a>
+
+  <div class="note">
+    <b>설치 방법</b>
+    <ol>
+      <li>이 페이지를 <b>아이폰 Safari</b>에서 여세요(다른 브라우저는 안 됩니다).</li>
+      <li>위 <b>‘아이폰에 설치’</b>를 누르고 “설치” 확인.</li>
+      <li>홈 화면에 ComfyRemote 아이콘이 생기면 끝.</li>
+      <li>첫 실행 후 <b>설정 탭</b>에서 백엔드 주소(미니 Tailscale 주소:8787)와 토큰을 입력하세요.</li>
+    </ol>
+    <p style="margin-top:12px;">※ 등록된 기기(김재윤의 iPhone)에서만 설치됩니다. 설치가 안 보이면 홈 화면을 잠시 기다렸다가 새로고침하세요.</p>
+  </div>
+</div>
+</body>
+</html>
