@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개발자 책상 장비 추천 — yoonspower</title>
+    <meta name="description" content="1인 개발자가 실제로 쓰는 맥·아이폰 작업 환경 장비 추천">
+    <style>
+        :root {
+            --ink: #1a1612;
+            --bg: #f5efe3;
+            --muted: rgba(26, 22, 18, 0.54);
+            --accent: rgba(26, 22, 18, 0.12);
+            --card: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.55;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 32px;
+        }
+        main {
+            max-width: 560px;
+            width: 100%;
+        }
+        .back {
+            display: inline-block;
+            font-size: 13px;
+            color: var(--muted);
+            text-decoration: none;
+            margin-bottom: 28px;
+        }
+        .back:hover { color: var(--ink); }
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+        .tag {
+            font-size: 14px;
+            color: var(--muted);
+            margin-bottom: 24px;
+        }
+        /* 공정위 대가성 문구 — 쿠팡 파트너스 최종 승인 필수. 상단 고정. */
+        .disclosure {
+            font-size: 13px;
+            color: var(--muted);
+            background: rgba(26, 22, 18, 0.04);
+            border-left: 3px solid var(--accent);
+            border-radius: 6px;
+            padding: 12px 14px;
+            margin-bottom: 36px;
+        }
+        .deals {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .deal {
+            display: block;
+            padding: 20px;
+            background: var(--card);
+            border-radius: 8px;
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid var(--accent);
+            transition: transform 0.15s;
+        }
+        .deal:hover { transform: translateY(-2px); }
+        .deal-name { font-size: 18px; font-weight: 600; margin-bottom: 4px; }
+        .deal-desc { font-size: 14px; color: var(--muted); margin-bottom: 12px; }
+        .deal-cta {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--ink);
+        }
+        footer {
+            margin-top: 48px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+        footer a { color: inherit; }
+    </style>
+</head>
+<body>
+    <main>
+        <a class="back" href="../">← yoonspower</a>
+
+        <h1>개발자 책상 위</h1>
+        <p class="tag">1인 개발자가 실제로 쓰는 맥·아이폰 작업 장비</p>
+
+        <p class="disclosure">
+            이 페이지는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
+        </p>
+
+        <!--
+          ┌─ 상품 추가 방법 ────────────────────────────────────────────┐
+          │ 1. 쿠팡 파트너스( partners.coupang.com )에서 상품 검색       │
+          │ 2. '링크 생성' → 내 파트너스 링크 복사                        │
+          │ 3. 아래 각 카드의  href="#COUPANG_LINK"  를 그 링크로 교체    │
+          │ 4. deal-name / deal-desc 를 실제 상품·추천 이유로 수정        │
+          │ ※ 가입·1차 승인 전에는 링크가 없으므로 자리표시(#)로 둬도 됨  │
+          │   (최종 승인 심사 때만 실제 링크·문구 캡처가 필요)           │
+          └────────────────────────────────────────────────────────────┘
+        -->
+        <div class="deals">
+            <a class="deal" href="#COUPANG_LINK" target="_blank" rel="noopener sponsored">
+                <div class="deal-name">USB-C 멀티 허브</div>
+                <div class="deal-desc">맥북 포트 부족의 근본 해결. HDMI·USB·SD·PD 충전 한 번에.</div>
+                <div class="deal-cta">쿠팡에서 보기 →</div>
+            </a>
+            <a class="deal" href="#COUPANG_LINK" target="_blank" rel="noopener sponsored">
+                <div class="deal-name">저소음 기계식 키보드 (적축)</div>
+                <div class="deal-desc">하루 8시간 타이핑용. 통울림 잡힌 무접점/적축 위주로.</div>
+                <div class="deal-cta">쿠팡에서 보기 →</div>
+            </a>
+            <a class="deal" href="#COUPANG_LINK" target="_blank" rel="noopener sponsored">
+                <div class="deal-name">모니터 암</div>
+                <div class="deal-desc">책상 공간 회수 + 목 각도 교정. 듀얼 세팅이면 필수.</div>
+                <div class="deal-cta">쿠팡에서 보기 →</div>
+            </a>
+            <a class="deal" href="#COUPANG_LINK" target="_blank" rel="noopener sponsored">
+                <div class="deal-name">노트북 스탠드</div>
+                <div class="deal-desc">맥북 발열·자세 동시 해결. 외장 키보드와 조합.</div>
+                <div class="deal-cta">쿠팡에서 보기 →</div>
+            </a>
+            <a class="deal" href="#COUPANG_LINK" target="_blank" rel="noopener sponsored">
+                <div class="deal-name">MagSafe 아이폰 거치대</div>
+                <div class="deal-desc">테스트 기기 거치용. 무선 충전되면서 화면 항상 보임.</div>
+                <div class="deal-cta">쿠팡에서 보기 →</div>
+            </a>
+        </div>
+
+        <footer>
+            문의: <a href="mailto:yoonspower@gmail.com">yoonspower@gmail.com</a>
+        </footer>
+    </main>
+</body>
+</html>
