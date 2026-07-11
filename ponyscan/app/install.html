@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>포니스캔 설치</title>
+<meta name="theme-color" content="#070910">
+<style>
+:root { --bg:#070910; --fg:#f3f5fa; --dim:#9aa4b5; --card:#12151e; --border:#262b36; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html,body { background:var(--bg); color:var(--fg); font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Pretendard","Noto Sans KR",sans-serif; -webkit-font-smoothing:antialiased; line-height:1.6; }
+.wrap { max-width:480px; margin:0 auto; padding:56px 24px 80px; text-align:center; }
+.logo { width:84px; height:84px; border-radius:20px; background:linear-gradient(135deg,#fbbf24,#fb7185); display:inline-flex; align-items:center; justify-content:center; font-size:42px; margin-bottom:20px; box-shadow:0 12px 40px rgba(251,191,36,.35); }
+h1 { font-size:30px; font-weight:700; letter-spacing:-0.5px; margin-bottom:6px; background:linear-gradient(135deg,#fbbf24,#fb7185); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+.sub { color:var(--dim); font-size:15px; margin-bottom:36px; }
+.btn { display:block; background:linear-gradient(135deg,#fbbf24,#fb7185); color:#fff; font-size:19px; font-weight:700; padding:18px; border-radius:16px; text-decoration:none; margin-bottom:16px; }
+.btn:active { opacity:.85; }
+.note { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:20px; text-align:left; font-size:14px; color:var(--dim); margin-top:28px; }
+.note b { color:var(--fg); }
+.note ol { margin:8px 0 0 18px; } .note li { margin-bottom:6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="logo">🏪</div>
+  <h1>포니스캔</h1>
+  <p class="sub">바코드 스캔 → 바로더 상품등록 · 1.0</p>
+
+  <a class="btn" href="itms-services://?action=download-manifest&url=https://yoonspower.github.io/ponyscan/app/manifest.plist">📲 아이폰에 설치</a>
+
+  <div class="note">
+    <b>사용 방법</b>
+    <ol>
+      <li>이 페이지를 <b>아이폰 Safari</b>에서 열고 설치.</li>
+      <li>오른쪽 위에서 <b>매장 선택</b>(본점/을지로).</li>
+      <li>상품 바코드가 보이게 비추고 <b>‘화면의 바코드 담기’</b> — 여러 개면 한 번에 다 담겨요.</li>
+      <li>✅=바코드 판독값과 인쇄 숫자 대조 통과. ⚠️면 다시 스캔.</li>
+      <li>행마다 <b>판매가·업체(카테고리)</b> 입력 → 아래 <b>등록</b> 버튼.</li>
+      <li>같은 바코드가 이미 있으면 자동으로 건너뜁니다.</li>
+    </ol>
+  </div>
+</div>
+</body>
+</html>
