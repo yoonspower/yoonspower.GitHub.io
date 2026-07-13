@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MacBeam 설치</title>
+<meta name="theme-color" content="#070910">
+<style>
+:root { --bg:#070910; --fg:#f3f5fa; --dim:#9aa4b5; --card:#12151e; --border:#262b36; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html,body { background:var(--bg); color:var(--fg); font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Pretendard","Noto Sans KR",sans-serif; -webkit-font-smoothing:antialiased; line-height:1.6; }
+.wrap { max-width:480px; margin:0 auto; padding:56px 24px 80px; text-align:center; }
+.logo { width:84px; height:84px; border-radius:20px; background:linear-gradient(135deg,#22d3ee,#a855f7); display:inline-flex; align-items:center; justify-content:center; font-size:42px; margin-bottom:20px; box-shadow:0 12px 40px rgba(34,211,238,.35); }
+h1 { font-size:30px; font-weight:700; letter-spacing:-0.5px; margin-bottom:6px; background:linear-gradient(135deg,#22d3ee,#a855f7); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+.sub { color:var(--dim); font-size:15px; margin-bottom:36px; }
+.btn { display:block; background:linear-gradient(135deg,#22d3ee,#a855f7); color:#fff; font-size:19px; font-weight:700; padding:18px; border-radius:16px; text-decoration:none; margin-bottom:16px; }
+.btn:active { opacity:.85; }
+.note { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:20px; text-align:left; font-size:14px; color:var(--dim); margin-top:28px; }
+.note b { color:var(--fg); }
+.note ol { margin:8px 0 0 18px; } .note li { margin-bottom:6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="logo">📡</div>
+  <h1>MacBeam</h1>
+  <p class="sub">v1.8 테스트 빌드 — 파일 브라우저 · 자동 모드 진입</p>
+
+  <a class="btn" href="itms-services://?action=download-manifest&url=https://yoonspower.github.io/macbeam/app/manifest.plist">📲 아이폰에 설치</a>
+
+  <div class="note">
+    <b>이번 빌드 새 기능</b>
+    <ol>
+      <li>설정 → 시작: <b>시작 로고 애니메이션</b> 끄기 토글.</li>
+      <li>앱 열면 <b>마지막 사용 모드</b>(리모트/터미널)로 바로 연결.</li>
+      <li>백그라운드 갔다 와도 덜 꺼지게 메모리 사용 개선.</li>
+      <li>폰→Mac 파일/사진 전송은 이제 <b>Mac의 ~/MacBeam 폴더</b>에 저장.</li>
+      <li>리모트 도구 · 터미널 메뉴에 <b>“Mac 파일 가져오기”</b> — 폴더 탐색해서 사진은 사진 앱에, 파일은 공유 시트로 저장.</li>
+    </ol>
+  </div>
+</div>
+</body>
+</html>
