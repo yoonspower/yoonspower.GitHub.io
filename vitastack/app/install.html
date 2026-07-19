@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VitaStack 설치</title>
+<meta name="theme-color" content="#0d3b3f">
+<style>
+:root { --bg:#0a2426; --fg:#f2f7f6; --dim:#9db8b5; --card:#10393c; --border:#1d4d50; --teal:#2aa198; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html,body { background:var(--bg); color:var(--fg); font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Pretendard","Noto Sans KR",sans-serif; -webkit-font-smoothing:antialiased; line-height:1.6; }
+.wrap { max-width:480px; margin:0 auto; padding:56px 24px 80px; text-align:center; }
+.logo { width:84px; height:84px; border-radius:20px; background:linear-gradient(135deg,#2aa198,#0d5c56); display:inline-flex; align-items:center; justify-content:center; font-size:42px; margin-bottom:20px; box-shadow:0 12px 40px rgba(42,161,152,.35); }
+h1 { font-size:30px; font-weight:700; letter-spacing:-0.5px; margin-bottom:6px; color:#7fe0d6; }
+.sub { color:var(--dim); font-size:15px; margin-bottom:36px; }
+.btn { display:block; background:linear-gradient(135deg,#2aa198,#12706a); color:#fff; font-size:19px; font-weight:700; padding:18px; border-radius:16px; text-decoration:none; margin-bottom:16px; }
+.btn:active { opacity:.85; }
+.note { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:20px; text-align:left; font-size:14px; color:var(--dim); margin-top:28px; }
+.note b { color:var(--fg); }
+.note ol { margin:8px 0 0 18px; } .note li { margin-bottom:6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="logo">💊</div>
+  <h1>VitaStack</h1>
+  <p class="sub">v1.0 테스트 빌드 — 목표 추천 · 서랍 스캔 · 둘러보기 31종</p>
+  <a class="btn" href="itms-services://?action=download-manifest&url=https://yoonspower.github.io/vitastack/app/manifest.plist">📲 아이폰에 설치</a>
+  <div class="note">
+    <b>설치 안 될 때</b>
+    <ol>
+      <li>설치 후 홈 화면에 아이콘이 흐리면 잠시 대기</li>
+      <li>설정 → 일반 → VPN 및 기기 관리에서 프로파일 신뢰</li>
+      <li>이 페이지는 Safari에서 열어야 설치 버튼이 동작</li>
+    </ol>
+  </div>
+</div>
+</body>
+</html>
