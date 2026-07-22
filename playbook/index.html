@@ -68,7 +68,7 @@ hr { border:none; border-top:1px solid var(--line); margin:2.2em 0; }
   <h1>🎬 AI 영상 퀄리티 플레이북</h1>
   <p class="meta">딥리서치 종합 · 최종 갱신 2026-07-22 · §13~17 = 렌고쿠 사후분석 → 연출·캐스팅·클링·스토리·크리에이터 팁</p>
 </header>
-<nav class="toc"><b>목차</b><a class="t2" href="#s1">0. 한 줄 결론</a><a class="t2" href="#s2">1. 격차 진단 — 우리 vs 잘 뽑는 사람들</a><a class="t2" href="#s3">2. 모델별 프롬프트 공식 (공식 문서 기준)</a><a class="t2" href="#s8">3. 스타트프레임 엔지니어링 (I2V 품질의 최대 결정 요인)</a><a class="t2" href="#s9">4. 생성 규율 — 테이크와 체리픽</a><a class="t2" href="#s10">5. 후반작업 — "AI 광택" 벗기기 (전부 무료 도구로 가능)</a><a class="t2" href="#s11">6. 사운드 — 인지 품질의 절반</a><a class="t2" href="#s12">7. AI티(슬롭) 진단표 — 증상별 해법 레이어</a><a class="t2" href="#s13">8. TTS — 한국어/일본어 내레이션 (2026-07 기준)</a><a class="t2" href="#s17">9. 다음 작품 표준 파이프라인 (실행 체크리스트)</a><a class="t2" href="#s18">10. 판타소너 역프롬프트 (2026-07-21, 조회수 상위 3편 프레임 실측)</a><a class="t2" href="#s25">11. 연출 문법 — 컷이 붙는 이유 (표준 영화 문법 + 우리 실측, 2026-07-21)</a><a class="t2" href="#s26">12. 쇼츠 리텐션 설계 (2026 데이터)</a><a class="t2" href="#s27">13. 연출 심화 — 렌고쿠 v11 사후분석 (2026-07-21, 공개 직후 자가진단)</a><a class="t2" href="#s35">14. 인물 실사화 캐스팅 문법 (2026-07-21)</a><a class="t2" href="#s38">15. Kling 3.0 고급 기능 (딥리서치+MCP 스키마 실측 2026-07-21)</a><a class="t2" href="#s39">16. 60초 스토리 설계 (딥리서치 2026-07-21 — 학술 데이터 기반)</a><a class="t2" href="#s44">17. 크리에이터 팁 수집 (한·일·중·서구 실전가들, 2026-07-22)</a><a class="t2" href="#s49">18. 소스 (주요)</a></nav>
+<nav class="toc"><b>목차</b><a class="t2" href="#s1">0. 한 줄 결론</a><a class="t2" href="#s2">1. 격차 진단 — 우리 vs 잘 뽑는 사람들</a><a class="t2" href="#s3">2. 모델별 프롬프트 공식 (공식 문서 기준)</a><a class="t2" href="#s8">3. 스타트프레임 엔지니어링 (I2V 품질의 최대 결정 요인)</a><a class="t2" href="#s9">4. 생성 규율 — 테이크와 체리픽</a><a class="t2" href="#s10">5. 후반작업 — "AI 광택" 벗기기 (전부 무료 도구로 가능)</a><a class="t2" href="#s11">6. 사운드 — 인지 품질의 절반</a><a class="t2" href="#s12">7. AI티(슬롭) 진단표 — 증상별 해법 레이어</a><a class="t2" href="#s13">8. TTS — 한국어/일본어 내레이션 (2026-07 기준)</a><a class="t2" href="#s17">9. 다음 작품 표준 파이프라인 (실행 체크리스트)</a><a class="t2" href="#s18">10. 판타소너 역프롬프트 (2026-07-21, 조회수 상위 3편 프레임 실측)</a><a class="t2" href="#s25">11. 연출 문법 — 컷이 붙는 이유 (표준 영화 문법 + 우리 실측, 2026-07-21)</a><a class="t2" href="#s26">12. 쇼츠 리텐션 설계 (2026 데이터)</a><a class="t2" href="#s27">13. 연출 심화 — 렌고쿠 v11 사후분석 (2026-07-21, 공개 직후 자가진단)</a><a class="t2" href="#s36">14. 인물 실사화 캐스팅 문법 (2026-07-21)</a><a class="t2" href="#s39">15. Kling 3.0 고급 기능 (딥리서치+MCP 스키마 실측 2026-07-21)</a><a class="t2" href="#s40">16. 60초 스토리 설계 (딥리서치 2026-07-21 — 학술 데이터 기반)</a><a class="t2" href="#s45">17. 크리에이터 팁 수집 (한·일·중·서구 실전가들, 2026-07-22)</a><a class="t2" href="#s50">18. 소스 (주요)</a></nav>
 <h1>AI 영상 퀄리티 플레이북 (2026-07-20 딥리서치 종합)</h1>
 <blockquote>
 <p>목적: 우리 힉스필드 파이프라인을 "인터넷 잘 뽑는 사람들" 수준으로 끌어올리기.
@@ -323,9 +323,9 @@ hr { border:none; border-top:1px solid var(--line); margin:2.2em 0; }
 <h2 id="s17">9. 다음 작품 표준 파이프라인 (실행 체크리스트)</h2>
 <ol start="0">
 <li><strong>소재 선정 게이트(§16)</strong>: 트렌드 창(개봉/방영 ±8주) 확인 → 아크 유형(유대·성장·변신=자기완결 우선, 죽음 단독 금지 — 죽음은 3단 압축의 최저점+kama muta 반전 엔딩으로만) → 60초 비트 구조(훅 5%/설정 15%/압축 전개 50%/최저점 20%/감정 정점 13%+루프) 스케치 후 컷시트 착수.</li>
-<li><strong>컷시트</strong> (기존 승인 게이트 유지) + 컷별 프롬프트에 슬롯 의무화: 조명원 / 렌즈·샷사이즈 / 카메라 1무빙+속도+시작끝 / 필름톤 / 네버리스트. <strong>+연출 컬럼 4개(§13)</strong>: 컷 길이(로그노멀 분산, 같은 길이 3연속 금지) / 이 컷이 바꾸는 것 한 단어 / 화면측·시선(L-R 락) / 프레임 오염(clean 3연속 금지). 씬당 투샷 마스터 1컷 배치.</li>
+<li><strong>컷시트</strong> (기존 승인 게이트 유지) + 컷별 프롬프트에 슬롯 의무화: 조명원 / 렌즈·샷사이즈 / 카메라 1무빙+속도+시작끝 / 필름톤 / 네버리스트. <strong>+연출 컬럼 4개(§13)</strong>: 컷 길이(로그노멀 분산, 같은 길이 3연속 금지) / 이 컷이 바꾸는 것 한 단어 / 화면측·시선(L-R 락) / 프레임 오염(clean 3연속 금지). 씬당 투샷 마스터 1컷 배치. <strong>+클라이맥스 실측 게이트(§13-F6)</strong>: 시그니처 액션·클라이맥스는 원작/레퍼런스 프레임을 2~4fps 재추출해 확인한 뒤 설계 — 기억으로 설계 금지.</li>
 <li><strong>스틸</strong>: 캐스팅 승인 직후 <strong>턴어라운드 시트</strong>(3/4·프로필 별도 생성) → 씬은 <strong>나노 2k 직출(2cr, 업스케일 단계 폐지)</strong> → 투샷 마스터에서 크롭 커버리지 파생 → I2V 투입. 캐치라이트·물기 등 눈 디테일은 스틸 단계에서.</li>
-<li><strong>생성</strong>: 기본 엔진 <strong>kling3_0 std(7.5cr/5s, sound off)</strong>, 히어로는 pro. duration은 컷시트 길이대로(3~15s 자유, 홀드 컷 10s). 감정 피크 컷은 <strong>first/last frame</strong>(표정 B=승인 스틸의 나노 편집본). 모션 프롬프트 3층 표준: 생명 레이어(breathing/blinking)+아크(then+물리행동)+카운터(understated, 네거티브 5~8). 히어로 컷만 2~3테이크(체리픽·프랑켄슈타인), 일반 컷 1테이크+게이트. Seedance 쓸 땐 fast로 프롬프트 확정 후 std.</li>
+<li><strong>생성</strong>: 기본 엔진 <strong>kling3_0 std(7.5cr/5s, sound off)</strong>, 히어로는 pro. duration은 컷시트 길이대로(3~15s 자유, 홀드 컷 10s). 감정 피크 컷은 <strong>first/last frame</strong>(표정 B=승인 스틸의 나노 편집본). 모션 프롬프트 3층 표준: 생명 레이어(breathing/blinking)+아크(then+물리행동)+카운터(understated, 네거티브 5~8) — <strong>단 감정 홀드 컷 전용, 액션 컷은 §13-F(모션 동사 문두·양손 서술·의상 명시·holds still 금지)</strong>. 히어로 컷만 2~3테이크(체리픽·프랑켄슈타인), 일반 컷 1테이크+게이트. Seedance 쓸 땐 fast로 프롬프트 확정 후 std.</li>
 <li><strong>검수</strong>: 기존 게이트 A/B 유지 + 모핑 다발 지점(손·머리카락·옷끝·반사면) 확대 검수.</li>
 <li><strong>후반</strong>: concat 후 그레이드+미세블러+그레인 ffmpeg 패스(신규 표준) → 히어로 편만 upscale_video 승인 요청.</li>
 <li><strong>사운드</strong>: 앰비언스+SFX+음악 3레이어 최소, 내레이션 덕킹, volumedetect 검증(기존). <strong>+J/L컷 기본값</strong>: 대사·씬 전환 오디오 1s 선행, 그림 컷과 소리 컷 동일 프레임 금지, 눈 감고 전환부 검청(§13-A7).</li>
@@ -555,8 +555,17 @@ hr { border:none; border-top:1px solid var(--line); margin:2.2em 0; }
 </tr>
 </tbody>
 </table></div>
-<h2 id="s35">14. 인물 실사화 캐스팅 문법 (2026-07-21)</h2>
-<h3 id="s36">판타소너 아카자 장편 프레임 실측 대조 (우리 렌고쿠 캐스팅 vs 그들 — <code>refs/competitors/faces/</code>)</h3>
+<h3 id="s35">F. 액션 컷 연출 (2026-07-22 시노부 실전 환류 — §13은 무액션 작품 사후분석이라 액션 규칙이 없었음)</h3>
+<ol>
+<li><strong>모션 예산 분리</strong>: C절의 3층 문법("holds very still, then…")은 <strong>감정 홀드 컷 전용</strong>. 액션 컷에 쓰면 정적인 슬라이드가 된다(시노부 1차 테이크 전체 기각 사유). 액션 컷은 모션 동사를 문두 8단어 안에 + 속도·결과("explodes upward", "snaps the katana halfway out") 서술. 정지·유지 계열 지시어 금지.</li>
+<li><strong>양손 규칙</strong>: 소품 조작 인서트(발도 등)는 양손의 역할을 각각 서술 — 한 손만 쓰면 한 손은 얼어붙는다.</li>
+<li><strong>초고속 공격 표현 2안</strong>: ①원작처럼 피격자 프레임 안의 빛/충격파/결과로만 표현(이동 모션 리스크 0 — ufotable 방식) ②주인공이 보이는 통과·돌진(팬서비스 우선일 때). 어느 쪽인지 <strong>원작 프레임 실측 후 사용자와 방향 확정</strong>(시노부에선 ①을 만들었다가 ② 확정 — 취향 변수 있음).</li>
+<li><strong>통과·실루엣 컷은 의상 명시 필수</strong>: "dark blurred figure"만 쓰면 나체풍 인물이 나올 수 있음("fully dressed in black uniform and white haori" 명시로 해결).</li>
+<li><strong>속도 부족은 편집 배속으로 보정 가능</strong>: 액션 1.15~1.35x, 홀드 컷은 원속 유지 — 대비가 리듬을 만든다.</li>
+<li><strong>클라이맥스 실측 게이트</strong>: 시그니처 액션은 컷시트 설계 <strong>전에</strong> 원작·레퍼런스를 2~4fps로 재추출해 프레임 단위로 확인. 기억으로 설계 금지(시노부 C5 3회 재작업의 원인).</li>
+</ol>
+<h2 id="s36">14. 인물 실사화 캐스팅 문법 (2026-07-21)</h2>
+<h3 id="s37">판타소너 아카자 장편 프레임 실측 대조 (우리 렌고쿠 캐스팅 vs 그들 — <code>refs/competitors/faces/</code>)</h3>
 <ol>
 <li><strong>핵심 격차 = 피부 질감 밀도</strong>: 그들의 얼굴은 주근깨·잡티·모공·기름기·흙먼지를 <strong>일부러 남긴다</strong>(291s 쇼크 ECU 실측 — 주근깨+피지 광+홍조). 우리 GPT 렌고쿠는 아이돌급 클린 스킨 — 예쁘지만 "AI 광택"의 잔재. 스틸 프롬프트에 잡티 밀도를 한 단계 올려야: "freckles, minor blemishes, oily sheen, dirt smudges" 수준까지.</li>
 <li><strong>애니 요소의 시대극 접지</strong>: 인간 시절/과거 파트는 <strong>애니 컬러 완전 제거</strong>(자연 흑발·낡은 무명옷·얼룩) → 변신/각성 순간에만 아이코닉 요소 투입. 그 대비 자체가 스펙터클이 된다(426s 변신 프레임: 핑크머리+문신+호박눈이 한 번에 등장).</li>
@@ -565,7 +574,7 @@ hr { border:none; border-top:1px solid var(--line); margin:2.2em 0; }
 <li><strong>얼굴 나이는 그들도 청년형</strong>: 배우상은 20대 초중반 자연 미남(아이돌 성형美 아님, 배우 캐릭터美). 우리 "청년 아이돌형" 픽 방향은 맞았고, 질감만 부족했다.</li>
 <li><strong>군중·다인 프레임</strong>: 도장 단체 씬(10인+)·마을 인파를 씀 — 우리는 최대 1인. 군중은 identity 불요라 난이도 낮은데 "세계가 산다"는 인상을 만든다.</li>
 </ol>
-<h3 id="s37">피처 번역 규칙 (딥리서치 — 원피스/켄신 성공 vs FMA/비밥 실패 분석 + 알리타 제작진 자료)</h3>
+<h3 id="s38">피처 번역 규칙 (딥리서치 — 원피스/켄신 성공 vs FMA/비밥 실패 분석 + 알리타 제작진 자료)</h3>
 <p>실패작이 "코스프레"로, 성공작이 "배우"로 읽힌 차이 = ①채도·물성 자연화 ②사용감 ③나이 토큰 통제.</p>
 <ol>
 <li><strong>색 아이덴티티 유지, 채도·명도 30~50% 다운</strong>: 켄신 머리 "붉은 기운만 살짝"이 호평 공식. <code>deep auburn-red hair</code>(선명한 빨강 대신). 단 <strong>실루엣·헤어라인 형태는 literal 유지</strong> — 팬 인식은 형태에 붙는다(원피스·유유백서 호평 핵심). 실루엣까지 바꾸면 "그냥 닮은 사람".</li>
@@ -578,7 +587,7 @@ hr { border:none; border-top:1px solid var(--line); margin:2.2em 0; }
 <li><strong>레퍼런스 운용값</strong>: 나노=ref 상한 6장·1024px+·정면+3/4 좌우·얼굴 30~50% 점유, 락 상용구 "Maintain the exact same facial features as the reference — same eyes, nose shape, jawline contour, skin texture" 고정 문자열화. GPT=턴어라운드 시트 1장(정면/3/4/측면)이 단일 초상보다 강함. Kling 요소참조(Bind Subject) 3~4앵글은 kling.ai 기능 — 우리 MCP 미노출(§15-0), 노출 확인 시 도입.</li>
 <li><strong>YouTube AI 라벨</strong>: 실사풍 AI는 업로드 시 synthetic disclosure 체크 의무(2024.3~, 2026 제재 강화 보고). ✅<strong>조치 완료(2026-07-22)</strong>: yt_upload.py에 <code>status.containsSyntheticMedia: true</code> 기본 탑재 + 기공개 88편(실사 연습실 7 + 이세계 취재 81) 소급 설정(videos.update, 전건 200+에코 검증). <strong>함정: 이 필드는 GET/list에 반환 안 됨(write-only성) — 확인은 PUT 응답 에코나 스튜디오 UI로. status 부분 업데이트 시 이 필드 누락하면 리셋 위험 — status를 만질 땐 항상 포함할 것.</strong> 픽션 캐릭터 실사화는 실존인물 딥페이크 규정과 무관.</li>
 </ol>
-<h2 id="s38">15. Kling 3.0 고급 기능 (딥리서치+MCP 스키마 실측 2026-07-21)</h2>
+<h2 id="s39">15. Kling 3.0 고급 기능 (딥리서치+MCP 스키마 실측 2026-07-21)</h2>
 <p>우리 MCP 노출 파라미터 실측: kling3_0=duration(3-15)/mode(std·pro·4k)/sound/start+end_image가 전부. <strong>seed·cfg·구조화 멀티샷 필드 미노출</strong>(fal 경로엔 cfg_scale·multi_prompt·negative 존재 — 정밀 제어 필요 시 별도 과금 검토 사안).</p>
 <ol>
 <li><strong>멀티샷 [도입가치 상]</strong>: 한 생성 안에 최대 6샷·총 15s·샷당 3s+, I2V에서 start frame이 캐릭터 앵커가 되어 <strong>샷 간 인물·조명 연속성을 모델이 유지</strong>. 문법=타임스탬프가 아니라 샷 라벨: <code>Master Prompt: &lt;씬 요약&gt;</code> + <code>Shot 1: &lt;프레이밍+모션&gt; (Duration: 5 seconds)</code> + <code>Shot 2: ...</code>. 규칙: 샷마다 프레이밍 단어(wide/close-up) 명시(안 하면 뭉개짐), 캐릭터 서술 블록을 샷마다 글자 그대로 반복(패러프레이즈=인물 재해석), 리테이크는 전체 재생성(크레딧 리스크 샷 수 비례). Higgsfield에선 prompt 텍스트에 라벨 문법 직접 기입으로 1회 저가 실험 필요. 용도="대사→리액션" 2컷 단일 생성(별도 생성+concat 대비 연속성 구조 우위).</li>
@@ -590,21 +599,21 @@ hr { border:none; border-top:1px solid var(--line); margin:2.2em 0; }
 <li><strong>10s+ 생성</strong>: 10s까지 품질 유지, <strong>15s는 말미 드리프트</strong>(15s 실패=크레딧 3배 손실). 연속 연기가 필수인 컷만 10-15s, 그 외 2×5s 우위. 디테일 풍부한 실사화 스틸은 드리프트에 유리한 조건.</li>
 <li><strong>4K 모드 [하]</strong>: 폰 시청 9:16 쇼츠엔 과잉. 예외=16:9 마스터에서 9:16 크롭 리프레임 뽑을 컷 1개.</li>
 </ol>
-<h2 id="s39">16. 60초 스토리 설계 (딥리서치 2026-07-21 — 학술 데이터 기반)</h2>
+<h2 id="s40">16. 60초 스토리 설계 (딥리서치 2026-07-21 — 학술 데이터 기반)</h2>
 <p><strong>렌고쿠 12.7만 vs 미츠리 236만의 진범</strong>: 캐릭터 인기 아님(공식 인기투표 렌고쿠 7위 &gt; 미츠리 12위). 격차 = <strong>아크 유형(유대·성장 vs 순수 죽음) × 트렌드 창(무한성 $600M 개봉 직후 vs 무한열차 6년 경과) × 감정 종류</strong>의 3변수.</p>
-<h3 id="s40">감정 서열 (공유 데이터)</h3>
+<h3 id="s41">감정 서열 (공유 데이터)</h3>
 <ol>
 <li><strong>kama muta(뭉클함)</strong> — "유대의 급격한 강화"가 트리거인 독립 감정(19개국 검증). 정의상 공유 동기가 내장됨. 재회·수용·연대·희생의 인정 장면이 발화점. 우리 포맷의 주력 감정.</li>
 <li>awe(실사화 스펙터클 자체) 3. 노스탤지어(원작 재현 충실도 — 이 니치의 기본 연료) 4. 성장/카타르시스.
 - <strong>저각성 슬픔 단독은 공유를 내린다</strong>(Berger·Milkman, NYT 7천 기사). 하강을 포함하되 <strong>마지막 비트는 상승</strong>으로(Reagan 아크 연구와 양립하는 하이브리드).</li>
 </ol>
-<h3 id="s41">60초 표준 비트 구조</h3>
+<h3 id="s42">60초 표준 비트 구조</h3>
 <p>훅 0-3s(감정 정점 선제시) → 설정 3-12s(관계 확립=<strong>모티프 1회차</strong> 심기) → 압축 전개 12-40s(모티프 2~3회 반복+변주로 시간 압축, 컷마다 원인→결과, 대사 0) → <strong>최저점 40-52s(죽음은 여기)</strong> → <strong>감정 정점 52-60s(kama muta 반전: 유산 계승/재회 환영/공동체 인정)</strong> + 마지막 프레임=첫 프레임 루프(2025-03부터 루프 재생=조회수 집계).
 - Up 'Married Life' 원리: 소품 모티프(넥타이·저금 항아리)가 시간과 인과를 동시 운반, 생략 전환(풍선 터짐→결혼식), 죽음이 아니라 <strong>유산 재정의로 마감</strong>. "대사를 뺄수록 더 감정적"(피트 닥터).
 - 의미 진행 속도 빠를수록 호감(PNAS 5만 텍스트) — 인생압축 몽타주 포맷 자체가 구조 우위.</p>
-<h3 id="s42">죽음씬 → 감동 변환 공식</h3>
+<h3 id="s43">죽음씬 → 감동 변환 공식</h3>
 <p>죽음은 버릴 자산이 아님(의미 있는 죽음이 appreciation·기억을 최강 유발 — OMEGA 2020). 문제는 끊는 위치: ①죽음=최저점 배치, 마지막 8~10s를 kama muta 비트로 반전 ②<strong>카메라는 죽는 자가 아니라 의미의 수신자로 끝낸다</strong>(탄지로의 얼굴 — Up이 장례가 아니라 모험책으로 끝나는 원리) ③최저점 침묵→상승계 스코어 전환(존 루이스식: 슬픔을 벅참으로 밀어올리는 건 음악) ④죽음 단독 금지 — <strong>성장→유대→희생 3단 압축</strong>으로 60초 안에 신규 시청자의 감정 투자를 만들어준 뒤 회수(우리·판타소너 렌고쿠 공통 실패=투자 없는 죽음 순간만 제시).</p>
-<h3 id="s43">소재 선정·시리즈 운영</h3>
+<h3 id="s44">소재 선정·시리즈 운영</h3>
 <ul>
 <li><strong>트렌드 창이 최대 단일 변수</strong>: 개봉/방영 ±8주 창 안의 캐릭터 우선 편성. 지금(2026-07)=주술회전 사멸회유 방영중·Solo Leveling 4월 복귀 창. <strong>귀멸 무한성 2부(아카자전)=2027</strong> — 귀멸은 2027 창까지 자산 축적 페이즈.</li>
 <li>자기완결 장면 &gt; 맥락 의존 장면: 죽음의 슬픔은 사전 감정 투자가 필요(연구 확립) — 쇼츠 신규 시청자는 투자 0. 식사·유대·훈련·변신은 투자 불요(kama muta는 순간 발화).</li>
@@ -612,8 +621,8 @@ hr { border:none; border-top:1px solid var(--line); margin:2.2em 0; }
 <li><strong>같은 캐릭터 2부작</strong>: 성장·유대편(kama muta 자기완결) 먼저 → 반응 보고 희생편(계승 엔딩) — 채널 안에서 감정 투자를 직접 축적한 뒤 죽음씬을 '2화'로 회수.</li>
 <li>시리즈 고정 요소(인트로 카드 보유)+시그니처 마감 컷으로 "이 채널은 이 감정을 준다"를 예측 가능하게.</li>
 </ul>
-<h2 id="s44">17. 크리에이터 팁 수집 (한·일·중·서구 실전가들, 2026-07-22)</h2>
-<h3 id="s45">일본 (note 실전가·극장 AI영화 감독)</h3>
+<h2 id="s45">17. 크리에이터 팁 수집 (한·일·중·서구 실전가들, 2026-07-22)</h2>
+<h3 id="s46">일본 (note 실전가·극장 AI영화 감독)</h3>
 <ol>
 <li><strong>"촬영장 컨셉"으로 위화감 흡수</strong>(ひこ/KLING先生): 실사화 이질감을 "영화 촬영 현장" 설정으로 정당화 — 실장비 고유명사(ARRI Alexa, dolly track, boom, apple box)로 리얼리즘 강제, <strong>그린스크린 트릭</strong>("large green screen suggests deep space") = 세계관 묘사 부담 없이 현장감만 획득. 캐릭터 불일치는 프롬프트 수정 아니라 ref 재업로드로.</li>
 <li><strong>스쿠인트(실눈) 추출법</strong>(AI-KINETICS): 캐릭터를 실눈으로 보고 보이는 <strong>상징 마커만</strong> 추출(산=단발·뺨 문양·귀걸이·모피) — 나머지는 버리고 <code>warrior girl</code> 같은 속성어 하나로 묶기. 정보 과다=오작동. <strong>배경을 현실 로케이션으로 구체화</strong>해야 애니풍 회귀를 막음.</li>
@@ -624,7 +633,7 @@ hr { border:none; border-top:1px solid var(--line); margin:2.2em 0; }
 <li><strong>연재 운용</strong>(CreativeEdge): 나노 리믹스 체인(결과물을 다른 ref와 재리믹스, 최대 4장 — 합성 스틸 고속 제작), <strong>Kling 프롬프트는 영어 고정</strong>(일어는 내부 번역 흔들림), 캐릭터 전속 목소리 등록 재사용. 실측 60초=3일.</li>
 <li><strong>중앙 정면 회귀 대응</strong>(AI FREAK): AI는 지시 없으면 센터 정면으로 회귀(우리 진단 2와 동일) — <code>Rule of Thirds cinematic shot, subject at the left third of the frame</code> 명문화. <strong>국적 명시</strong>("日本人女性にしてください")가 자연스러운 아시아 얼굴의 최단 경로.</li>
 </ol>
-<h3 id="s46">중국 (可灵 공식·AI 단막극 공업 파이프라인·거장 공창계획)</h3>
+<h3 id="s47">중국 (可灵 공식·AI 단막극 공업 파이프라인·거장 공창계획)</h3>
 <ol start="9">
 <li><strong>可灵 공식 공식</strong>: T2V=(镜头언어+光影)+주체+운동+장면+(분위기) / <strong>I2V는 주체+운동만</strong>(장면 재묘사 금지 — 우리 원칙 재확인). 동작엔 <strong>수단까지</strong>("손으로 선글라스를 쓴다"가 "선글라스 쓴다"보다 응답률↑). 수치 지정("개 10마리")·복잡 물리(낙하·바운스) 불안정 공식 고지. <strong>모션 브러시 static으로 픽셀 고정=의도치 않은 카메라 흔들림 방지</strong>. "东方意境·아시아" 키워드가 아시아 얼굴·동양 미감 유도(공식 명시).</li>
 <li><strong>첫/끝프레임 3사 실측</strong>(澎湃): 무협 액션 보간=Kling 압승(장풍→화염→얼굴 반사광까지), 정적 페어는 약함. 규칙: 두 프레임 유사도 높게 / <strong>두 프레임에 없는 요소를 프롬프트에 넣지 말 것</strong> / 의상 패턴 등 고유 특징은 프롬프트 재명시(보간 중 소실 방지) / 단발 생성 불신, 다회로 안정 확인.</li>
@@ -636,7 +645,7 @@ hr { border:none; border-top:1px solid var(--line); margin:2.2em 0; }
 <li><strong>아시아 얼굴</strong>: 即梦(Dreamina)이 아시아 얼굴 우위 통설, MJ는 Stylize 50 이하로 'MJ 미형화 필터' 제거. 가짜 느낌 주범=피부 디테일 결핍 → 후처리 워크플로가 정석(§14 잡티 결론과 합치).</li>
 <li><strong>역추출 공정화</strong>(빌리빌리): 터진 레퍼런스 영상을 Gemini 영상분석으로 기위(机位)·운镜·동작 6요소 역산해 프롬프트 복원 — 벤치마킹을 감이 아닌 공정으로(우리 판타소너 프레임 실측과 동일 철학, 도구만 자동화).</li>
 </ol>
-<h3 id="s47">한국 (BIFAN 수상자·현업 제작기·수익 실데이터)</h3>
+<h3 id="s48">한국 (BIFAN 수상자·현업 제작기·수익 실데이터)</h3>
 <ol start="18">
 <li><strong>BIFAN 수상 공식</strong>: 심사 기준=서사 일관성+감정 효과+기술 품질(스펙터클 아님). 폭설(기술상+관객상)=<strong>AI의 약점(왜곡·이질감)을 장르 선택으로 흡수</strong>(코즈믹 호러) — ひこ의 촬영장 컨셉론·판타소너 BTS와 같은 원리의 3번째 독립 검증. 배짱(2026 기술상)=비현실 스펙터클 대신 <strong>"일상의 표정과 대화 리듬"</strong> 조정이 수상 사유 — 미세 표정·대화 템포가 설득 포인트.</li>
 <li><strong>권한슬(국내 1호 AI 영화감독, 두바이 대상)</strong>: "인물 일관성이 최대 난제 — 일관성 확보가 내러티브의 전제 조건". 제작비 0원·5일. 반복 생성→피드백→점진 개선 루프.</li>
@@ -649,7 +658,7 @@ hr { border:none; border-top:1px solid var(--line); margin:2.2em 0; }
 <li><strong>수익 실데이터</strong>: 쇼츠 RPM 실측 164원/유효1천회(2,084만뷰=약 150만원), 평균 50~90원. <strong>라이선스 음악 1곡=수익 풀 50%·2곡=33%로 축소</strong>(자체 생성 음악은 무관 — 우리 스택 유리). AI 콘텐츠 라벨 의무+<strong>독창적 편집·해설 없으면 '비진정성' 수익화 거절 가능</strong>(2025.7 대량생산 규제 강화) — 편집·사운드 후반이 수익화 방어이기도. 니치 성장성: 2025.6 주간 글로벌 구독 증가 톱50 중 8개가 AI 쇼츠 채널.</li>
 <li>국내 니치 동향: 나혼렙 Vol.1~3·화산귀환 EP.01(마떼스튜디오, 제작기 비공개)·네이버웹툰 공식 AI 실사 광고 집행 — 팬메이드→공식 광고 시장 확장 중.</li>
 </ol>
-<h3 id="s48">서구권 (Dave Clark·PJ Ace·Dor Brothers·Neural Viz 외 — 본인 발언·기고만)</h3>
+<h3 id="s49">서구권 (Dave Clark·PJ Ace·Dor Brothers·Neural Viz 외 — 본인 발언·기고만)</h3>
 <p><strong>수렴 패턴 4(복수 독립 발언 = 승격 1순위)</strong>: ①"프롬프트 간 기억 없음" 전제 — 인물·의상·장소·톤을 매 프롬프트 전면 재기술(Clark+PJ) ②잘 나온 결과물을 LLM으로 역공학해 프롬프트 재사용·룩 고정(Clark+PJ+Dor) ③<strong>생성과 편집을 병렬로 — 타임라인이 다음 프롬프트를 지시</strong>(PJ+Gaál+Dor: 생성 대기 중 편집, 편집하다 빈 곳이 다음 생성 주문) ④결함을 지우지 말고 컨셉·세계관으로 흡수(Trillo+Neural Viz+PJ — ひこ·BIFAN 폭설 포함 총 5중 검증).</p>
 <ol start="28">
 <li><strong>Dave Clark</strong>: 색은 나열 말고 <strong>지배색 3~5개+심리 역할</strong>("멜랑콜리 블루 워시 속 단 하나의 희망적 웜 오렌지 광점"). <strong>전 캐릭터 대사를 본인이 연기 녹음→ElevenLabs speech-to-speech로 음색만 변환</strong>(포즈·감정 보존 — TTS보다 자연, 우리 성우 isolation 불가 씬의 대안). 24fps 생성→보간 60-120fps→편집 리타임으로 체감 길이 연장+매끈 슬로모. 얼굴 뭉개진 테이크는 폐기 말고 ref 스틸 얼굴 마스크 구제·여러 테이크 마스크 조립.</li>
@@ -663,7 +672,7 @@ hr { border:none; border-top:1px solid var(--line); margin:2.2em 0; }
 <li><strong>Curious Refuge 실험</strong>: 모션 트랜스퍼 드라이버는 원본 영상보다 <strong>흑백 depth map이 최강</strong>(카메라·동작 보존+시각 노이즈 제거, 4종 비교 — 스켈레톤·컬러 마스크는 역효과). "단순한 워크플로가 복잡한 것을 이긴다."</li>
 <li><strong>페스티벌 심사 경향</strong>(AIFF 2025): 승리 공식="냉정한 내레이션 × 기괴한 비주얼"의 대비. <strong>감점 클리셰 2 = AI 자체에 대한 철학적 자기언급·신파 소재</strong>(불치병 아기류). 퍼블리싱 전술: <strong>본편+제작기(BTS) 이중 발행</strong>이 수상·노출 배가(BTS 부문 별도 존재 — 우리 채널에도 메이킹 콘텐츠 이원화 근거).</li>
 </ol>
-<h2 id="s49">18. 소스 (주요)</h2>
+<h2 id="s50">18. 소스 (주요)</h2>
 <ul>
 <li>Google 공식 Veo 3.1 프롬프트 가이드 (cloud.google.com blog) ✅</li>
 <li>Kling 공식: kling-ai-prompt-guide / ai-image-to-video-workflow-guide / start-end-frames quickstart ✅/◐</li>
