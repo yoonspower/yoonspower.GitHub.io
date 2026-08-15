@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anthropic Academy 학습 지도 — 21개 코스 완전 안내</title>
+<style>
+:root{
+  --dark:#141413; --light:#faf9f5; --mid:#b0aea5; --lightgray:#e8e6dc;
+  --orange:#d97757; --blue:#6a9bcc; --green:#788c5d;
+  --paper:#ffffff; --line:#e3e0d6; --muted:#6f6c62;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Roboto,sans-serif;
+  background:var(--light); color:var(--dark); line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+
+/* ---------- HERO ---------- */
+header.hero{background:var(--dark);color:var(--light);padding:64px 0 56px;}
+.eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);font-weight:700;margin-bottom:18px}
+h1{font-size:40px;line-height:1.25;font-weight:700;letter-spacing:-.02em;margin-bottom:20px}
+.hero p{color:#cfccc2;font-size:17px;max-width:660px}
+.hero .facts{display:flex;gap:32px;margin-top:36px;flex-wrap:wrap}
+.fact b{display:block;font-size:28px;color:var(--light);line-height:1.2}
+.fact span{font-size:13px;color:var(--mid)}
+
+/* ---------- PROGRESS BAR (sticky) ---------- */
+.progwrap{position:sticky;top:0;z-index:50;background:rgba(250,249,245,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.progwrap .wrap{display:flex;align-items:center;gap:18px;padding-top:14px;padding-bottom:14px}
+.bar{flex:1;height:8px;background:var(--lightgray);border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--orange),var(--green));border-radius:99px;transition:width .45s cubic-bezier(.2,.8,.2,1)}
+.progtext{font-size:13px;font-weight:700;white-space:nowrap;color:var(--muted)}
+.resetbtn{font:inherit;font-size:12px;border:1px solid var(--line);background:transparent;color:var(--muted);padding:5px 12px;border-radius:99px;cursor:pointer}
+.resetbtn:hover{border-color:var(--mid);color:var(--dark)}
+
+/* ---------- SECTIONS ---------- */
+section{padding:56px 0}
+.sec-head{margin-bottom:28px}
+h2{font-size:27px;font-weight:700;letter-spacing:-.01em;margin-bottom:10px}
+h2 .num{color:var(--orange);font-size:15px;display:block;margin-bottom:6px;letter-spacing:.1em;font-weight:700}
+.lede{color:var(--muted);font-size:16px;max-width:700px}
+.divider{height:1px;background:var(--line)}
+
+/* ---------- CALLOUT ---------- */
+.callout{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--orange);border-radius:0 10px 10px 0;padding:20px 24px;margin:24px 0}
+.callout h4{font-size:15px;font-weight:700;margin-bottom:8px}
+.callout p{font-size:15px;color:var(--muted)}
+
+/* ---------- TRACK ---------- */
+.track{margin-bottom:44px}
+.track-head{display:flex;align-items:flex-start;gap:16px;padding:20px 22px;border-radius:12px;margin-bottom:18px}
+.track-head .badge{flex:none;width:40px;height:40px;border-radius:10px;display:grid;place-items:center;font-weight:700;font-size:17px;color:#fff}
+.track-head h3{font-size:20px;font-weight:700;margin-bottom:4px}
+.track-head p{font-size:14.5px;color:var(--muted)}
+.t-a{background:#fbf1ec} .t-a .badge{background:var(--orange)}
+.t-b{background:#eef3f9} .t-b .badge{background:var(--blue)}
+.t-c{background:#f0f3ec} .t-c .badge{background:var(--green)}
+
+/* ---------- CARD ---------- */
+.card{background:var(--paper);border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden;transition:box-shadow .2s,border-color .2s}
+.card:hover{border-color:var(--mid)}
+.card.open{box-shadow:0 6px 28px rgba(20,20,19,.09)}
+.card.done{background:#f7f6f1}
+.card.done .c-title{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--mid)}
+.c-top{display:flex;align-items:flex-start;gap:14px;padding:18px 20px;cursor:pointer}
+.chk{flex:none;width:22px;height:22px;margin-top:2px;border:2px solid var(--mid);border-radius:6px;display:grid;place-items:center;cursor:pointer;transition:.15s;background:#fff}
+.chk:hover{border-color:var(--orange)}
+.chk.on{background:var(--green);border-color:var(--green)}
+.chk svg{width:13px;height:13px;stroke:#fff;stroke-width:3.4;fill:none;opacity:0;transition:.15s}
+.chk.on svg{opacity:1}
+.c-body{flex:1;min-width:0}
+.c-title{font-size:16.5px;font-weight:700;letter-spacing:-.01em}
+.c-en{font-size:12.5px;color:var(--mid);font-weight:500;margin-left:7px}
+.c-one{font-size:14.5px;color:var(--muted);margin-top:4px}
+.tags{display:flex;gap:6px;margin-top:9px;flex-wrap:wrap;align-items:center}
+.tag{font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:99px;background:var(--lightgray);color:var(--muted);letter-spacing:.02em}
+.tag.lv1{background:#e7f0e2;color:#4e6338}
+.tag.lv2{background:#e6eef7;color:#3f6288}
+.tag.lv3{background:#f7e6df;color:#9a4b2c}
+.tag.core{background:var(--dark);color:var(--light)}
+.caret{flex:none;color:var(--mid);font-size:12px;margin-top:6px;transition:transform .25s}
+.card.open .caret{transform:rotate(180deg)}
+
+.c-detail{display:none;padding:2px 20px 22px 56px;border-top:1px solid var(--line);margin-top:-1px}
+.card.open .c-detail{display:block}
+.qbox{background:#fbf1ec;border-radius:9px;padding:13px 16px;margin:18px 0;font-size:15px}
+.qbox b{color:var(--orange);font-size:12px;letter-spacing:.08em;display:block;margin-bottom:3px}
+dl.meta{display:grid;grid-template-columns:96px 1fr;gap:9px 14px;font-size:14.5px;margin-bottom:6px}
+dl.meta dt{color:var(--mid);font-weight:700;font-size:13px;padding-top:1px}
+dl.meta dd{color:#3c3a35}
+h5{font-size:13px;letter-spacing:.08em;color:var(--mid);font-weight:700;margin:22px 0 10px;text-transform:uppercase}
+ol.chaps{list-style:none;counter-reset:c}
+ol.chaps li{counter-increment:c;position:relative;padding:7px 0 7px 34px;font-size:14.5px;border-bottom:1px dashed var(--line)}
+ol.chaps li:last-child{border:none}
+ol.chaps li::before{content:counter(c);position:absolute;left:0;top:8px;width:22px;height:22px;border-radius:6px;background:var(--lightgray);color:var(--muted);font-size:11.5px;font-weight:700;display:grid;place-items:center}
+ol.chaps li span{color:var(--mid);font-size:13px;display:block}
+
+.ex{border:1px solid var(--line);border-radius:10px;margin-bottom:12px;overflow:hidden}
+.ex-h{background:#f7f6f1;padding:10px 14px;font-size:13.5px;font-weight:700}
+.ex-b{padding:14px}
+.prompt{background:var(--dark);color:#ece9df;border-radius:8px;padding:14px 16px;font-size:13.5px;line-height:1.7;white-space:pre-wrap;word-break:break-word;font-family:ui-monospace,SFMono-Regular,Menlo,"Consolas",monospace}
+.prompt.bad{background:#f6ecea;color:#8a4433;border:1px dashed #d9b3a8}
+.why{font-size:13.5px;color:var(--muted);margin-top:10px;padding-left:12px;border-left:2px solid var(--lightgray)}
+.golink{display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-size:14px;font-weight:700;color:var(--dark);text-decoration:none;border-bottom:2px solid var(--orange);padding-bottom:2px}
+.golink:hover{color:var(--orange)}
+
+/* ---------- PLAN ---------- */
+.weeks{display:grid;gap:12px}
+.week{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:20px 22px;display:grid;grid-template-columns:70px 1fr;gap:18px;align-items:start}
+.week .w{font-size:12px;font-weight:700;letter-spacing:.06em;color:#fff;background:var(--dark);border-radius:7px;padding:6px 0;text-align:center}
+.week h4{font-size:16.5px;font-weight:700;margin-bottom:6px}
+.week p{font-size:14.5px;color:var(--muted)}
+.week .todo{margin-top:10px;font-size:13.5px;background:#fbf1ec;border-radius:7px;padding:9px 13px;color:#8a4433}
+
+/* ---------- PROMPT LAYERS ---------- */
+.layers{display:grid;gap:12px;counter-reset:l}
+.layer{counter-increment:l;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:20px 22px 20px 66px;position:relative}
+.layer::before{content:counter(l);position:absolute;left:20px;top:20px;width:30px;height:30px;border-radius:9px;background:var(--orange);color:#fff;font-weight:700;font-size:14px;display:grid;place-items:center}
+.layer h4{font-size:16.5px;font-weight:700;margin-bottom:6px}
+.layer p{font-size:14.5px;color:var(--muted)}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+@media(max-width:720px){.compare{grid-template-columns:1fr}
+  h1{font-size:29px} .hero{padding:44px 0 40px} .c-detail{padding-left:20px}
+  dl.meta{grid-template-columns:1fr;gap:2px 0} dl.meta dt{margin-top:8px}
+  .week{grid-template-columns:1fr}}
+.cmp{border-radius:9px;padding:12px 14px;font-size:13px;line-height:1.65}
+.cmp.no{background:#f6ecea;color:#8a4433}
+.cmp.yes{background:#eef3ec;color:#3f5530}
+.cmp b{display:block;font-size:11.5px;letter-spacing:.06em;margin-bottom:5px;opacity:.75}
+
+footer{background:var(--dark);color:var(--mid);padding:40px 0;font-size:13.5px}
+footer a{color:var(--light)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Anthropic Academy · 학습 지도</div>
+    <h1>21개 코스, 어디서 시작해<br>어디로 가야 하는가</h1>
+    <p>Anthropic이 직접 운영하는 공식 무료 교육 사이트를 한 장으로 압축했습니다. 코스 목록이 아니라 <b>순서와 판단 기준</b>을 담았습니다. 각 카드를 펼치면 그 코스가 답해주는 질문과, 배운 걸 바로 써먹는 예시 프롬프트가 나옵니다.</p>
+    <div class="facts">
+      <div class="fact"><b>21</b><span>개 코스</span></div>
+      <div class="fact"><b>무료</b><span>전 과정 · 수료증 발급</span></div>
+      <div class="fact"><b>3</b><span>개 트랙으로 정리</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="progwrap">
+  <div class="wrap">
+    <div class="progtext" id="ptext">0 / 21 완료</div>
+    <div class="bar"><i id="pbar"></i></div>
+    <button class="resetbtn" onclick="resetAll()">초기화</button>
+  </div>
+</div>
+
+<div class="wrap">
+
+<section>
+  <div class="sec-head">
+    <h2><span class="num">먼저 알아둘 것</span>이 사이트의 정체</h2>
+  </div>
+  <p class="lede">주소는 두 개인데 같은 곳입니다. <b>anthropic.com/learn</b>이 소개 페이지고, 실제 강의는 <b>anthropic.skilljar.com</b>에서 돌아갑니다. 계정 없이도 둘러볼 수 있고, 수료증을 받으려면 무료 가입만 하면 됩니다.</p>
+  <div class="callout">
+    <h4>21개를 다 들을 필요는 없습니다</h4>
+    <p>절반 이상이 <b>AI Fluency</b> 시리즈인데, 이건 같은 프레임워크를 교사용·학생용·비영리용·소상공인용으로 갈아 끼운 것입니다. 자기 상황에 맞는 하나만 고르면 됩니다. 실질적으로 대부분의 사람에게 필요한 건 <b>5개</b>이고, 아래에서 그 다섯 개는 챕터 단위로 파고듭니다.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="sec-head">
+    <h2><span class="num">코스 지도</span>세 갈래로 나눠 보기</h2>
+    <p class="lede">카드를 누르면 펼쳐집니다. 왼쪽 네모를 체크하면 위쪽 진도율에 반영됩니다. <b>핵심</b> 표시가 붙은 다섯 개는 챕터 목록과 실전 예시까지 들어 있습니다.</p>
+  </div>
+  <div id="tracks"></div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="sec-head">
+    <h2><span class="num">4주 플랜</span>혼자 완주하는 순서</h2>
+    <p class="lede">하루 30분 기준입니다. 핵심은 강의를 다 듣는 게 아니라 <b>매주 실제 업무 하나를 옮겨오는</b> 것입니다. 안 옮기면 다음 주에 다 잊습니다.</p>
+  </div>
+  <div class="weeks">
+    <div class="week">
+      <div class="w">1주차</div>
+      <div>
+        <h4>Claude 101 · AI Capabilities and Limitations</h4>
+        <p>먼저 도구를 손에 익힙니다. 그다음 AI가 왜 자신 있게 틀리는지를 배워두면, 결과물을 어디까지 믿을지 감이 잡힙니다. 이 감각이 없으면 나중에 크게 데입니다.</p>
+        <div class="todo">과제 — 이번 주 실제로 쓴 메일이나 보고서 하나를 Claude로 다시 써보고, 뭐가 다른지 비교해보기</div>
+      </div>
+    </div>
+    <div class="week">
+      <div class="w">2주차</div>
+      <div>
+        <h4>Introduction to Claude Cowork</h4>
+        <p>대화창을 벗어나 내 파일 위에서 일을 시키는 단계입니다. 여기서부터 체감 생산성이 확 뜁니다. 전역 지침과 프로젝트로 '매번 설명하는 수고'를 없애는 게 이번 주 목표입니다.</p>
+        <div class="todo">과제 — 매달 반복하는 정리 작업 하나를 골라 폴더째 맡겨보기</div>
+      </div>
+    </div>
+    <div class="week">
+      <div class="w">3주차</div>
+      <div>
+        <h4>Introduction to agent skills · Introduction to subagents</h4>
+        <p>2주차에 한 걸 <b>재사용 가능한 형태로 굳히는</b> 단계입니다. 스킬은 "한 번 가르치면 다음부턴 이름만 부르면 되는" 장치고, 서브에이전트는 큰 일을 쪼개 맡기는 방식입니다.</p>
+        <div class="todo">과제 — 2주차 작업을 스킬로 만들어 이름만 불러서 돌려보기</div>
+      </div>
+    </div>
+    <div class="week">
+      <div class="w">4주차</div>
+      <div>
+        <h4>Claude Code 101 → (관심 있으면) Introduction to MCP</h4>
+        <p>터미널에서 코드를 다루거나 자동화를 붙일 생각이 있다면 여기로 넘어갑니다. 개발이 전혀 필요 없다면 4주차는 건너뛰고, 대신 <b>AI Fluency: Framework &amp; Foundations</b>로 기초 체력을 다지는 편이 낫습니다.</p>
+        <div class="todo">과제 — 작은 저장소 하나에 CLAUDE.md를 써보고, 규칙이 실제로 지켜지는지 확인</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="sec-head">
+    <h2><span class="num">부록</span>프롬프트가 잘 먹히는 네 겹</h2>
+    <p class="lede">코스에서도 다루지만, 미리 알고 들으면 흡수율이 다릅니다. AI가 헤매는 건 대개 정보가 없어서가 아니라 <b>판단 기준이 없어서</b>입니다.</p>
+  </div>
+  <div class="layers">
+    <div class="layer">
+      <h4>맥락 — 누가, 어떤 상황에서 읽는가</h4>
+      <p>읽는 사람의 출발점과 소요 시간이 박히면 문장 난이도, 예시 개수, 생략할 것이 자동으로 결정됩니다.</p>
+      <div class="compare">
+        <div class="cmp no"><b>흐릿함</b>회의록 정리해줘</div>
+        <div class="cmp yes"><b>또렷함</b>회의에 불참한 팀장이 3분 안에 파악할 수 있게 회의록을 정리해줘</div>
+      </div>
+    </div>
+    <div class="layer">
+      <h4>재료 — 무엇을 근거로 삼을 것인가</h4>
+      <p>"네가 아는 걸로 써줘"와 "첨부한 이 파일과 이 페이지만 근거로 써줘"는 결과가 다릅니다. 후자는 지어낼 여지를 막습니다.</p>
+      <div class="compare">
+        <div class="cmp no"><b>흐릿함</b>시장 동향 좀 정리해줘</div>
+        <div class="cmp yes"><b>또렷함</b>첨부한 3개 보고서 안에 있는 수치만 써서 정리하고, 출처를 문장마다 표기해줘</div>
+      </div>
+    </div>
+    <div class="layer">
+      <h4>스펙 — 형식·분량·구조를 숫자로</h4>
+      <p>"보기 좋게"는 기준이 아닙니다. 몇 장인지, 어떤 덩어리로 나뉘는지, 어디에 들어갈 문서인지를 말해주세요.</p>
+      <div class="compare">
+        <div class="cmp no"><b>흐릿함</b>보고서 형식으로 잘 만들어줘</div>
+        <div class="cmp yes"><b>또렷함</b>A4 두 장, ①현황 ②원인 ③대안 3안 ④권고 순서, 각 항목 5줄 이내, 표는 하나만</div>
+      </div>
+    </div>
+    <div class="layer">
+      <h4>금지 조건 — 의외로 효과가 가장 큰 한 줄</h4>
+      <p>하지 말아야 할 것을 한 줄 적어주는 게 톤을 가장 빠르게 잡습니다. 특히 추측 금지 조항은 신뢰도를 크게 올립니다.</p>
+      <div class="compare">
+        <div class="cmp no"><b>흐릿함</b>(아무 제약 없음)</div>
+        <div class="cmp yes"><b>또렷함</b>자료에 없는 건 추측하지 말고 [확인 필요]로 표시할 것. 마케팅 표현 금지. 영어 용어는 첫 등장 때만 괄호 병기</div>
+      </div>
+    </div>
+    <div class="layer">
+      <h4>여기에 예시 하나를 더하면 완성</h4>
+      <p>"이런 느낌이면 좋겠어"라며 결과물 샘플을 하나 보여주면, 나머지는 그 결에 맞춰집니다. 설명 백 마디보다 샘플 하나가 정확합니다. 그리고 긴 작업일수록 <b>"결과 내기 전에 목차부터 보여줘"</b>라고 중간 체크포인트를 걸어두세요. 방향이 틀어진 채 완성되는 참사를 막습니다.</p>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    출처 — <a href="https://anthropic.com/learn" target="_blank" rel="noopener">anthropic.com/learn</a> · <a href="https://anthropic.skilljar.com/" target="_blank" rel="noopener">anthropic.skilljar.com</a><br>
+    코스 구성은 수시로 갱신되므로, 실제 수강 전 원문 페이지에서 최신 목록을 확인하세요.
+  </div>
+</footer>
+
+<script>
+const COURSES = [
+{
+ track:"A", core:true, lv:1,
+ title:"Claude 101", en:"Claude 101",
+ url:"https://anthropic.skilljar.com/claude-101",
+ one:"Claude를 처음 켠 사람이 일주일 안에 손에 익도록 만드는 공식 입문 코스.",
+ q:"대화창에 뭘 어떻게 써야 원하는 게 나오지?",
+ who:"AI를 업무에 처음 들이는 모든 사람. 개발 지식은 전혀 필요 없습니다.",
+ pre:"없음. 여기가 출발점입니다.",
+ after:"프로젝트에 반복 업무 맥락을 저장하고, 아티팩트로 문서·표·페이지를 뽑고, 외부 도구를 연결해 씁니다.",
+ chaps:[
+  ["Claude 만나기","Claude란 무엇인가 · 첫 대화 · 더 나은 결과 얻는 법 · 데스크톱에서 일하는 방식"],
+  ["일과 지식 정리하기","프로젝트 입문 · 아티팩트로 만들기 · 스킬 다루기"],
+  ["Claude의 손 넓히기","도구 연결 · 사내 검색 · 리서치로 깊게 파기"],
+  ["종합 활용","역할별 실제 사례 · 그 밖의 활용 방식"],
+  ["마무리와 수료증","다음 단계 안내 · 수료증 발급"]
+ ],
+ ex:[
+  {t:"첫 대화 — 같은 요청, 다른 결과",
+   bad:"회의록 정리해줘",
+   good:"아래 회의 녹취를 정리해줘.\n읽는 사람은 회의에 불참한 팀장이고, 3분 안에 파악해야 해.\n\n① 결정된 것\n② 미결 쟁점 (누가 반대했는지 포함)\n③ 담당자별 할 일 — 기한 표기\n\n발언자 이름은 빼고, 녹취에 없는 내용은 추측하지 말고 '언급 없음'으로 표시해.",
+   why:"왼쪽은 정리의 기준이 없어서 매번 다른 결과가 나옵니다. 오른쪽은 읽는 사람·소요 시간·구조·금지 조건이 다 박혀 있어서 열 번을 돌려도 같은 품질이 나옵니다."},
+  {t:"프로젝트 — 매번 설명하는 수고 없애기",
+   good:"[프로젝트 지침에 저장]\n나는 매달 부서 월간보고서를 작성한다. 첨부한 지난 3개월치가 표준 양식이다.\n앞으로 내가 '월간보고 초안'이라고만 하면 이 양식·문체·분량을 그대로 따라 초안을 잡아줘.\n숫자는 내가 주는 자료에서만 가져오고, 근거가 없는 항목은 [확인 필요]로 비워둘 것.",
+   why:"프로젝트는 '매번 붙여넣던 배경 설명'을 한 번만 저장해두는 서랍입니다. 이후 대화는 '월간보고 초안' 다섯 글자로 끝납니다."},
+  {t:"아티팩트 — 설명 대신 실물로 받기",
+   good:"지난 분기 팀별 지출 데이터를 표로 정리하고,\n예산을 초과 집행한 팀만 색으로 구분한 HTML 한 장으로 만들어줘.\n팀 이름을 클릭하면 세부 항목이 펼쳐지게 하고, 합계 행은 맨 아래 고정.",
+   why:"아티팩트는 답변 옆에 실제로 열리는 결과물입니다. '어떻게 만드는지 설명해줘'가 아니라 '만들어줘'라고 하면 됩니다."}
+ ]
+},
+{
+ track:"A", core:true, lv:1,
+ title:"Claude Cowork 입문", en:"Introduction to Claude Cowork",
+ url:"https://anthropic.skilljar.com/introduction-to-claude-cowork",
+ one:"대화가 아니라 '내 파일과 폴더 위에서' Claude를 직접 일하게 만드는 법.",
+ q:"폴더째 던져놓고 알아서 정리시키려면?",
+ who:"엑셀·PDF·문서 정리에 시간을 많이 쓰는 실무자. 첫 주에 체감 생산성이 가장 크게 뛰는 코스입니다.",
+ pre:"Claude 101 수준의 기본기.",
+ after:"여러 단계짜리 작업을 통째로 맡기고, 스킬·플러그인으로 내 방식을 가르치고, 안전하게 팀에 공유합니다.",
+ chaps:[
+  ["Cowork 만나기","Cowork란 무엇인가 · 설치와 설정 · 무엇을 대신해줄 수 있나"],
+  ["첫 작업 맡겨보기","실제 파일로 첫 작업을 끝까지 돌려보기"],
+  ["내 것으로 만들기","더 빠르게 좋은 결과 얻기 · 전역 지침과 프로젝트 · 스킬로 내 방식 가르치기 · 플러그인으로 팀 노하우 심기"],
+  ["일하는 곳 어디서나","Claude in Chrome · Claude for Microsoft 365"],
+  ["공유와 안전","안전하게 쓰는 원칙 · 플러그인용 스킬 검증 · 만든 것을 팀에 공유하기"],
+  ["마무리와 다음 단계","정리 및 이해도 퀴즈"]
+ ],
+ ex:[
+  {t:"첫 작업 — 파일 40개를 표 한 장으로",
+   good:"'거래처 견적서' 폴더 안의 PDF 40개에서\n업체명 · 견적일 · 총액 · 유효기간을 뽑아 엑셀 한 장으로 만들어줘.\n\n금액이 명확히 안 읽히는 파일은 억지로 추측하지 말고\n'확인필요'로 두고 옆 칸에 파일명을 남겨줘.\n총액 기준 내림차순 정렬, 첫 행 고정.",
+   why:"핵심은 마지막 두 줄입니다. 애매한 건 비워두라고 말해주지 않으면 그럴듯하게 채워 넣습니다. '모르면 모른다고 해'는 실무에서 가장 값진 한 줄입니다."},
+  {t:"전역 지침 — 매번 말하지 않아도 되게",
+   good:"[전역 지침]\n내가 만드는 모든 엑셀은 기본으로 이렇게 해줘.\n· 첫 행 고정, 열 너비 자동 맞춤\n· 금액은 천 단위 콤마, 원 단위 표기\n· 시트명은 YYYYMM 형식\n· 원본 파일은 절대 덮어쓰지 말고 사본을 만들 것",
+   why:"마지막 줄이 안전장치입니다. 파일을 직접 다루는 도구일수록 '하지 말 것'을 미리 못 박아두는 게 중요합니다."},
+  {t:"스킬 — 한 번 가르치고 이름만 부르기",
+   good:"방금 한 견적서 정리 작업, 매달 반복할 거야.\n이 절차를 스킬로 만들어줘.\n트리거는 '견적 정리'. 다음부터 그 말만 하면 똑같은 결과가 나오게.",
+   why:"같은 설명을 세 번 이상 했다면 그건 스킬로 만들 신호입니다. 세 번째부터는 이름 하나로 끝납니다."}
+ ]
+},
+{
+ track:"A", core:false, lv:1,
+ title:"AI의 능력과 한계", en:"AI Capabilities and Limitations",
+ url:"https://anthropic.skilljar.com/ai-capabilities-and-limitations",
+ one:"AI가 왜 가끔 자신만만하게 틀리는지, 그 작동 원리를 비전공자 언어로 풀어주는 코스.",
+ q:"이 답변을 어디까지 믿어야 하지?",
+ who:"AI가 만든 결과물을 검토하거나 승인해야 하는 위치의 사람. 결정권이 있을수록 중요합니다.",
+ pre:"없음.",
+ after:"결과물의 신뢰 구간을 스스로 가늠하고, 반드시 사람이 검증해야 할 지점을 짚어냅니다."
+},
+{
+ track:"A", core:false, lv:1,
+ title:"AI 활용 역량: 프레임워크와 기초", en:"AI Fluency: Framework & Foundations",
+ url:"https://anthropic.skilljar.com/ai-fluency-framework-foundations",
+ one:"AI와 협업하는 태도를 4D 프레임워크로 정리한, 시리즈 전체의 뿌리 격 코스.",
+ q:"도구 사용법 말고, AI와 일하는 원칙은 뭐지?",
+ who:"단발성 요령이 아니라 오래 쓸 판단 기준을 원하는 사람.",
+ pre:"없음. 다른 AI Fluency 코스는 전부 이걸 변주한 것이라, 이 하나를 먼저 듣는 게 순서입니다.",
+ after:"효과적·효율적·윤리적·안전하게 AI와 협업하는 자기만의 기준을 세웁니다."
+},
+
+{
+ track:"B", core:true, lv:2,
+ title:"Claude Code 101", en:"Claude Code 101",
+ url:"https://anthropic.skilljar.com/claude-code-101",
+ one:"터미널에서 Claude에게 코드를 맡기는 방법. 개발자용 진입 코스.",
+ q:"코드를 직접 짜는 대신 시키려면 어떻게 해야 하지?",
+ who:"명령줄과 코드 편집기가 낯설지 않은 사람. 초급~중급.",
+ pre:"기본적인 명령줄·편집기 사용 경험, 그리고 Claude Pro/Max/Enterprise 계정 또는 API 키.",
+ after:"탐색→계획→코딩→커밋 흐름으로 일하고, CLAUDE.md로 프로젝트 규칙을 고정하고, 훅으로 자동 검사를 겁니다.",
+ chaps:[
+  ["Claude Code란","AI 코딩 에이전트의 개념"],
+  ["작동 원리","에이전트 루프가 어떻게 도는가"],
+  ["설치","터미널 · VS Code · JetBrains · 데스크톱 · 웹"],
+  ["첫 프롬프트","직접 한 번 돌려보기"],
+  ["일상 워크플로","탐색 → 계획 → 코딩 → 커밋"],
+  ["컨텍스트 관리","/compact · /clear · /context"],
+  ["코드 리뷰","결과물을 검증하는 절차"],
+  ["CLAUDE.md","프로젝트 기억을 파일로 남기기"],
+  ["서브에이전트","큰 작업을 쪼개 맡기기"],
+  ["스킬","반복 절차를 능력으로 굳히기"],
+  ["MCP","외부 도구 연결하기"],
+  ["훅(Hooks)","포매팅·명령 차단·알림을 규칙으로 강제"],
+  ["코스 퀴즈","최종 점검"]
+ ],
+ ex:[
+  {t:"탐색이 먼저 — 코드부터 건드리지 않게",
+   bad:"로그인 버그 고쳐줘",
+   good:"아직 코드는 수정하지 마.\n먼저 이 저장소에서 로그인 관련 파일이 어디에 흩어져 있는지,\n요청이 어떤 순서로 흘러가는지 파악해서 정리해줘.\n의심되는 지점이 있으면 근거가 되는 파일과 줄 번호를 함께 알려줘.\n\n내가 확인한 다음에 수정 방향을 정하자.",
+   why:"바로 고치라고 하면 엉뚱한 파일 다섯 개를 건드립니다. '탐색 → 계획 → 코딩 → 커밋'에서 앞의 두 단계를 명시적으로 끊어주는 게 이 코스의 핵심 습관입니다."},
+  {t:"CLAUDE.md — 매번 말하던 규칙을 파일로",
+   good:"이 프로젝트 규칙을 CLAUDE.md에 정리해줘.\n· 커밋 메시지는 한글, 제목 50자 이내\n· 테스트는 pytest, 수정 후 반드시 관련 테스트 실행\n· 새 의존성을 추가하기 전에는 반드시 나에게 먼저 물어볼 것\n· 마이그레이션 파일은 손대지 말 것",
+   why:"CLAUDE.md는 프로젝트의 장기 기억입니다. 세션이 바뀌어도 남기 때문에, 같은 잔소리를 반복하지 않게 됩니다."}
+ ]
+},
+{
+ track:"B", core:false, lv:2,
+ title:"Claude Code 실전", en:"Claude Code in Action",
+ url:"https://anthropic.skilljar.com/claude-code-in-action",
+ one:"긴 세션을 끝까지 통제하는 법 — 방향 조정, 설정, 검증에 집중한 심화 코스.",
+ q:"작업이 길어지면 왜 산으로 가고, 어떻게 잡아채지?",
+ who:"Claude Code를 이미 써봤고, 한두 시간짜리 작업에서 품질이 무너지는 걸 겪어본 사람.",
+ pre:"Claude Code 101.",
+ after:"긴 작업 중간에 방향을 틀고, 결과를 스스로 검증하게 만들고, 설정으로 실수 자체를 막습니다."
+},
+{
+ track:"B", core:true, lv:2,
+ title:"에이전트 스킬 입문", en:"Introduction to agent skills",
+ url:"https://anthropic.skilljar.com/introduction-to-agent-skills",
+ one:"같은 설명을 반복하지 말고 한 번만 가르쳐두는 방법. 마크다운 파일 하나면 됩니다.",
+ q:"매번 똑같은 지시를 붙여넣는 게 지겨운데?",
+ who:"반복 업무가 있는 사람 전부. 개발자만의 기능이 아닙니다.",
+ pre:"Claude Code나 Cowork를 조금 써본 경험.",
+ after:"스킬을 만들어 자동으로 발동시키고, 여러 파일로 쪼개 관리하고, 팀에 배포하고, 안 먹힐 때 원인을 짚습니다.",
+ chaps:[
+  ["스킬이란 무엇인가","반복 지시를 능력으로 바꾸는 개념"],
+  ["첫 스킬 만들기","파일 구조와 최소 구성"],
+  ["설정과 다중 파일 스킬","커지는 스킬을 쪼개 관리하기"],
+  ["다른 기능과의 차이","스킬 vs 서브에이전트 vs MCP vs 훅"],
+  ["스킬 공유하기","팀 배포와 플러그인화"],
+  ["문제 해결","발동이 안 될 때 · 실행 중 오류가 날 때"]
+ ],
+ ex:[
+  {t:"설명(description)이 승부처 — 발동이 안 되는 이유 90%",
+   bad:"name: 보고서\ndescription: 보고서 만드는 스킬",
+   good:"name: weekly-report\ndescription: 주간 업무보고 초안을 사내 3섹션 양식(완료·계획·리스크)으로 작성한다.\n  '주간보고', '위클리', '주보', '금주 실적' 이 언급되면 반드시 트리거할 것.\n  월간·분기 보고에는 사용하지 않는다.",
+   why:"스킬은 이름이 아니라 설명을 보고 발동합니다. 어떤 말이 나왔을 때 켜지고, 어떤 경우엔 켜지지 말아야 하는지까지 적어야 정확히 반응합니다."},
+  {t:"실전 — 주간보고 스킬 한 벌",
+   good:"주간보고 스킬을 만들어줘.\n\n[본문 규칙]\n· ① 이번 주 완료 ② 다음 주 계획 ③ 리스크 세 섹션 고정\n· 각 항목은 한 줄 요약 + 근거(링크나 파일명)\n· 리스크는 '영향 / 대응 / 담당' 형태로\n· 완료 항목이 없으면 억지로 채우지 말고 '해당 없음'\n\n[말투]\n· 담백한 보고체, 형용사 최소화, '~했음' 종결",
+   why:"스킬 본문은 후배에게 넘기는 인수인계서라고 생각하면 됩니다. 예외 처리('없으면 해당 없음')까지 적어두면 그때부터 손이 거의 안 갑니다."}
+ ]
+},
+{
+ track:"B", core:false, lv:2,
+ title:"서브에이전트 입문", en:"Introduction to subagents",
+ url:"https://anthropic.skilljar.com/introduction-to-subagents",
+ one:"큰 일을 쪼개 여러 전문가에게 나눠 맡기는 구조 만들기.",
+ q:"한 번에 다 시키면 뒤죽박죽인데, 어떻게 나누지?",
+ who:"조사·검토·구현이 한 작업 안에 뒤섞여 있는 사람.",
+ pre:"Claude Code 101 또는 스킬 입문.",
+ after:"역할별 전문 에이전트를 정의해 작업을 위임하고, 각자의 결과를 합쳐 마무리합니다."
+},
+{
+ track:"B", core:true, lv:3,
+ title:"MCP 입문", en:"Introduction to Model Context Protocol",
+ url:"https://anthropic.skilljar.com/introduction-to-model-context-protocol",
+ one:"Claude에 내 도구·데이터를 직접 연결하는 표준 규격을 파이썬으로 처음부터 만들어보기.",
+ q:"사내 시스템이나 내 API를 Claude가 직접 쓰게 하려면?",
+ who:"연결을 직접 만들려는 개발자. 쓰기만 할 거라면 이 코스는 필요 없습니다.",
+ pre:"파이썬 실무 경험과 JSON·HTTP 기본 이해.",
+ after:"도구·리소스·프롬프트 세 가지 기본 요소로 MCP 서버와 클라이언트를 직접 구현합니다.",
+ chaps:[
+  ["들어가며","코스 안내"],
+  ["MCP 소개","MCP 클라이언트란 무엇인가"],
+  ["MCP 서버 실습","프로젝트 세팅 · 도구 정의 · 인스펙터로 검사"],
+  ["클라이언트와 연결","클라이언트 구현 · 리소스 정의와 접근 · 프롬프트 정의와 활용"],
+  ["평가와 마무리","최종 평가 · 전체 복습"]
+ ],
+ ex:[
+  {t:"작게 시작하는 첫 서버",
+   good:"사내 위키 검색 API를 감싸는 MCP 서버를 파이썬으로 만들어줘.\n\n· 도구 1개 — search_wiki(query) → 상위 5건의 제목·요약·URL\n· 리소스 1개 — 최근 열람 문서 목록\n· 인증 토큰은 환경변수에서 읽고 코드에 절대 넣지 말 것\n\n먼저 이 최소 구성만 만들고, 인스펙터로 확인한 뒤에 기능을 늘리자.",
+   why:"MCP 서버는 처음부터 크게 만들면 어디서 터졌는지 모릅니다. 도구 하나·리소스 하나로 시작해 인스펙터로 확인하는 순서가 코스가 가르치는 방식입니다."}
+ ]
+},
+{
+ track:"B", core:false, lv:3,
+ title:"MCP 심화", en:"Model Context Protocol: Advanced Topics",
+ url:"https://anthropic.skilljar.com/model-context-protocol-advanced-topics",
+ one:"실서비스에 올릴 MCP 서버를 위한 고급 구현 패턴.",
+ q:"장난감 말고 운영에 쓸 서버는 뭐가 다르지?",
+ who:"MCP 서버를 실제 환경에 배포하려는 개발자.",
+ pre:"MCP 입문.",
+ after:"인증·확장성·에러 처리 등 운영 환경에서 필요한 패턴을 적용합니다."
+},
+{
+ track:"B", core:false, lv:2,
+ title:"Claude 플랫폼 101", en:"Claude Platform 101",
+ url:"https://anthropic.skilljar.com/claude-platform-101",
+ one:"Claude 위에 직접 서비스를 얹으려는 개발자를 위한 플랫폼 전반 안내.",
+ q:"내 제품에 Claude를 붙이려면 뭐부터 봐야 하지?",
+ who:"제품에 AI를 탑재하려는 개발자·기획자.",
+ pre:"프로그래밍 기초.",
+ after:"플랫폼의 구성 요소와 선택지를 파악하고 어디서 시작할지 정합니다."
+},
+{
+ track:"B", core:false, lv:3,
+ title:"Claude API로 개발하기", en:"Building with the Claude API",
+ url:"https://anthropic.skilljar.com/claude-with-the-anthropic-api",
+ one:"API를 통해 모델을 직접 다루는 법을 넓고 촘촘하게 다루는 코스.",
+ q:"코드에서 모델을 호출해 제품을 만들려면?",
+ who:"백엔드에서 직접 모델을 호출하는 개발자.",
+ pre:"프로그래밍 실무 경험.",
+ after:"메시지 API·도구 사용·프롬프트 캐싱 등을 활용해 실제 애플리케이션을 만듭니다."
+},
+{
+ track:"B", core:false, lv:3,
+ title:"Amazon Bedrock에서 Claude", en:"Claude with Amazon Bedrock",
+ url:"https://anthropic.skilljar.com/claude-in-amazon-bedrock",
+ one:"AWS 환경에서 Claude 모델을 운영하는 방법.",
+ q:"우리 인프라가 AWS인데 어떻게 붙이지?",
+ who:"AWS를 쓰는 조직의 개발자.",
+ pre:"AWS 기본 지식과 Claude API 이해.",
+ after:"Bedrock을 통해 Claude를 호출하고 운영합니다."
+},
+{
+ track:"B", core:false, lv:3,
+ title:"Google Cloud에서 Claude", en:"Claude on Google Cloud",
+ url:"https://anthropic.skilljar.com/claude-with-google-vertex",
+ one:"Vertex AI 기반으로 Claude를 운영하는 방법.",
+ q:"우리 인프라가 GCP인데 어떻게 붙이지?",
+ who:"Google Cloud를 쓰는 조직의 개발자.",
+ pre:"GCP 기본 지식과 Claude API 이해.",
+ after:"Vertex AI에서 Claude를 호출하고 운영합니다."
+},
+
+{
+ track:"C", core:false, lv:1,
+ title:"AI 활용 역량 — 교육자용", en:"AI Fluency for educators",
+ url:"https://anthropic.skilljar.com/ai-fluency-for-educators",
+ one:"AI 활용 원칙을 수업 설계와 기관 전략에 적용하는 버전.",
+ q:"수업과 평가에 AI를 어떻게 들여올까?",
+ who:"대학·성인교육 강사, 교육 기획자.",
+ pre:"AI Fluency: Framework & Foundations 권장.",
+ after:"수업 설계와 학사 정책에 AI를 반영합니다."
+},
+{
+ track:"C", core:false, lv:1,
+ title:"AI 활용 역량 — 학생용", en:"AI Fluency for students",
+ url:"https://anthropic.skilljar.com/ai-fluency-for-students",
+ one:"학습과 과제 수행에 AI를 책임 있게 쓰는 법.",
+ q:"베끼지 않으면서 제대로 활용하려면?",
+ who:"학생, 그리고 자기주도 학습자.",
+ pre:"없음.",
+ after:"학습 효율을 올리면서 학문적 정직성도 지키는 사용 습관을 만듭니다."
+},
+{
+ track:"C", core:false, lv:1,
+ title:"AI 활용 역량 — 소상공인용", en:"AI Fluency for Small Businesses",
+ url:"https://anthropic.skilljar.com/ai-fluency-for-small-businesses",
+ one:"작은 조직의 현실에 맞춘 AI 도입 전략.",
+ q:"사람도 예산도 적은데 어디부터 손대지?",
+ who:"소상공인, 1인 기업, 소규모 팀 운영자.",
+ pre:"없음.",
+ after:"적은 자원으로 효과가 큰 지점부터 골라 도입합니다."
+},
+{
+ track:"C", core:false, lv:1,
+ title:"AI 활용 역량 — 비영리용", en:"AI Fluency for nonprofits",
+ url:"https://anthropic.skilljar.com/ai-fluency-for-nonprofits",
+ one:"비영리 조직의 임팩트와 효율을 함께 올리는 전략.",
+ q:"제한된 예산에서 성과를 어떻게 늘리지?",
+ who:"비영리·공익 조직 실무자.",
+ pre:"없음.",
+ after:"조직 운영과 사업 실행에 AI를 접목합니다."
+},
+{
+ track:"C", core:false, lv:2,
+ title:"AI 활용 역량 — 만드는 사람용", en:"AI Fluency for Builders",
+ url:"https://anthropic.skilljar.com/ai-fluency-for-builders",
+ one:"문제 발견부터 배포까지, 해결책을 끝까지 밀고 가는 전 과정.",
+ q:"아이디어를 실제로 돌아가는 것으로 어떻게 만들지?",
+ who:"직접 뭔가를 만들어 보려는 사람.",
+ pre:"AI Fluency: Framework & Foundations.",
+ after:"문제 정의 → 설계 → 구현 → 배포의 한 사이클을 스스로 돕니다."
+},
+{
+ track:"C", core:false, lv:2,
+ title:"AI 활용 역량 가르치기", en:"Teaching AI Fluency",
+ url:"https://anthropic.skilljar.com/teaching-ai-fluency",
+ one:"남에게 AI 활용 역량을 가르치고 평가하기 위한 강사용 자료.",
+ q:"이걸 우리 팀에 어떻게 전파하지?",
+ who:"사내 교육 담당자, 강사.",
+ pre:"AI Fluency: Framework & Foundations.",
+ after:"커리큘럼을 짜고, 학습자의 역량을 평가합니다."
+},
+{
+ track:"C", core:false, lv:1,
+ title:"AI 활용 역량 — 유·초·중등 교사용", en:"AI Fluency for pK-12 Educators",
+ url:"https://anthropic.skilljar.com/path/ai-fluency-for-pk-12-educators",
+ one:"유아부터 고등학교까지, 학교 현장 교사를 위한 학습 경로.",
+ q:"어린 학습자에게는 어떻게 접근해야 하지?",
+ who:"초·중·고 및 유아 교육 교사.",
+ pre:"없음.",
+ after:"학년과 연령에 맞춰 AI를 수업에 들입니다."
+}
+];
+
+const TRACKS = {
+ A:{cls:"t-a", label:"A", name:"일단 잘 쓰기", desc:"개발 지식 없이 오늘부터 업무에 적용하는 갈래. 대부분의 사람에게는 여기까지가 전부입니다."},
+ B:{cls:"t-b", label:"B", name:"직접 만들기", desc:"코드·자동화·연결을 손수 만드는 갈래. 위에서 아래로 갈수록 깊어집니다."},
+ C:{cls:"t-c", label:"C", name:"가르치고 확산시키기", desc:"AI Fluency 시리즈. 같은 프레임워크의 대상별 변주이니 자기 상황에 맞는 하나만 고르면 됩니다."}
+};
+const LV = {1:["입문","lv1"],2:["중급","lv2"],3:["고급","lv3"]};
+
+const done = new Set();
+
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+
+function detail(c,i){
+  let h = '<div class="c-detail">';
+  h += '<div class="qbox"><b>이 코스가 답해주는 질문</b>“'+c.q+'”</div>';
+  h += '<dl class="meta">';
+  h += '<dt>누가</dt><dd>'+c.who+'</dd>';
+  h += '<dt>선수 지식</dt><dd>'+c.pre+'</dd>';
+  h += '<dt>끝나면</dt><dd>'+c.after+'</dd>';
+  h += '</dl>';
+  if(c.chaps){
+    h += '<h5>커리큘럼</h5><ol class="chaps">';
+    c.chaps.forEach(function(p){ h += '<li>'+p[0]+'<span>'+p[1]+'</span></li>'; });
+    h += '</ol>';
+  }
+  if(c.ex){
+    h += '<h5>바로 따라 해보기</h5>';
+    c.ex.forEach(function(e){
+      h += '<div class="ex"><div class="ex-h">'+e.t+'</div><div class="ex-b">';
+      if(e.bad) h += '<div class="prompt bad">'+esc(e.bad)+'</div><div style="height:8px"></div>';
+      h += '<div class="prompt">'+esc(e.good)+'</div>';
+      if(e.why) h += '<div class="why">'+e.why+'</div>';
+      h += '</div></div>';
+    });
+  }
+  h += '<a class="golink" href="'+c.url+'" target="_blank" rel="noopener">코스 열기 →</a>';
+  h += '</div>';
+  return h;
+}
+
+function render(){
+  let out = "";
+  ["A","B","C"].forEach(function(k){
+    const t = TRACKS[k];
+    out += '<div class="track">';
+    out += '<div class="track-head '+t.cls+'"><div class="badge">'+t.label+'</div><div>'
+        +  '<h3>'+t.name+'</h3><p>'+t.desc+'</p></div></div>';
+    COURSES.forEach(function(c,i){
+      if(c.track!==k) return;
+      const lv = LV[c.lv];
+      out += '<div class="card" id="card'+i+'">';
+      out += '<div class="c-top" onclick="toggle('+i+',event)">';
+      out += '<div class="chk" onclick="check('+i+',event)"><svg viewBox="0 0 16 16"><polyline points="2.5,8.5 6.5,12 13.5,4"/></svg></div>';
+      out += '<div class="c-body"><div class="c-title">'+c.title+'<span class="c-en">'+c.en+'</span></div>';
+      out += '<div class="c-one">'+c.one+'</div>';
+      out += '<div class="tags"><span class="tag '+lv[1]+'">'+lv[0]+'</span>'
+          + (c.core?'<span class="tag core">핵심 · 심화 수록</span>':'')+'</div>';
+      out += '</div><div class="caret">▼</div></div>';
+      out += detail(c,i);
+      out += '</div>';
+    });
+    out += '</div>';
+  });
+  document.getElementById("tracks").innerHTML = out;
+}
+
+function toggle(i,e){
+  document.getElementById("card"+i).classList.toggle("open");
+}
+function check(i,e){
+  e.stopPropagation();
+  const card = document.getElementById("card"+i);
+  const box = card.querySelector(".chk");
+  if(done.has(i)){ done.delete(i); box.classList.remove("on"); card.classList.remove("done"); }
+  else { done.add(i); box.classList.add("on"); card.classList.add("done"); }
+  updateBar();
+}
+function updateBar(){
+  const n = done.size, tot = COURSES.length;
+  document.getElementById("pbar").style.width = (n/tot*100)+"%";
+  let msg = n+" / "+tot+" 완료";
+  if(n===0) msg = "0 / "+tot+" 완료 — 여기서 출발";
+  if(n===tot) msg = "전부 완료 🎉";
+  document.getElementById("ptext").textContent = msg;
+}
+function resetAll(){
+  done.clear();
+  document.querySelectorAll(".chk").forEach(function(b){b.classList.remove("on");});
+  document.querySelectorAll(".card").forEach(function(c){c.classList.remove("done");});
+  updateBar();
+}
+
+render();
+updateBar();
+</script>
+</body>
+</html>
